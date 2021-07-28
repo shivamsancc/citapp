@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'CIT Educational Trust'),
 
     /*
     |--------------------------------------------------------------------------
@@ -166,6 +166,10 @@ return [
         //===============cstom by shivam anand=========================
         Maatwebsite\Excel\ExcelServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+
+        Onecentlin\Adminer\ServiceProvider::class,
+
+
 
         /*
          * Package Service Providers...

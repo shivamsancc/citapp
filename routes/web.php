@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('homepage');
-
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('homepage');
+Route::group(['middleware' => ['Visitor_log']], function () {
 Auth::routes();
-
+Route::get('/', [App\Http\Controllers\frontend\webSiteController::class, 'index'])->name('homepage');
 
 //==================================Admins routes=====================================
 Route::middleware(['auth'])->group(function () {
@@ -36,3 +36,4 @@ Route::get('/getcerificate', [App\Http\Controllers\frontend\webpageController::c
 Route::get('/getadmintcard', [App\Http\Controllers\frontend\webpageController::class, 'getadmintcard'])->name('getadmintcard');
 Route::get('/getadmission', [App\Http\Controllers\frontend\webpageController::class, 'getadmission'])->name('getadmission');
 Route::get('/getresult', [App\Http\Controllers\frontend\webpageController::class, 'getresult'])->name('getresult');
+});
