@@ -337,7 +337,7 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="sub_title">
-                <h2>Unlimited Possibilities</h2>
+                <h2>Unlimited Possibilities</h2>{{isset($master_settings['site_name'])}}
                 <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
             </div><!-- ends: .section-header -->
         </div>
@@ -607,6 +607,9 @@
                                         <label><i class="flaticon-copywriting"></i></label>
                                         <textarea class="form-control"  placeholder="Write Something Here" required=""></textarea>
                                     </div>
+                                </div>
+                                <div class="col-12 col-xs-12 col-md-12">
+                                    {!! app('captcha')->display() !!}
                                 </div>
                                 <div class="col-12 col-xs-12 col-md-12 register-btn-box">
                                     <button class="register-btn" type="submit">Send Now</button>

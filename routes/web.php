@@ -13,27 +13,42 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('homepage');
 Route::group(['middleware' => ['Visitor_log']], function () {
-Auth::routes();
-Route::get('/', [App\Http\Controllers\frontend\webSiteController::class, 'index'])->name('homepage');
+  include('admin_route.php');
+  Auth::routes();
+  Route::get('/', [App\Http\Controllers\frontend\webSiteController::class, 'index'])->name('homepage');
 
-//==================================Admins routes=====================================
-Route::middleware(['auth'])->group(function () {
-  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-  Route::post('/importcerificate', [App\Http\Controllers\admin\dashboardController::class, 'importcerificate'])->name('importcerificate');
-  Route::post('/importadmitcard', [App\Http\Controllers\admin\dashboardController::class, 'importadmitcard'])->name('importadmitcard');
-  Route::post('/importaresult', [App\Http\Controllers\admin\dashboardController::class, 'importaresult'])->name('importaresult');
+  //==================================Admins routes=====================================
+  Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::post('/importcerificate', [App\Http\Controllers\admin\dashboardController::class, 'importcerificate'])->name('importcerificate');
+    Route::post('/importadmitcard', [App\Http\Controllers\admin\dashboardController::class, 'importadmitcard'])->name('importadmitcard');
+    Route::post('/importaresult', [App\Http\Controllers\admin\dashboardController::class, 'importaresult'])->name('importaresult');
+  });
+
+
+
+
+  //==================================Custom Route=========================================
+  Route::get('/getcerificate', [App\Http\Controllers\frontend\webpageController::class, 'getcerificate'])->name('getcerificate');
+  Route::get('/getadmintcard', [App\Http\Controllers\frontend\webpageController::class, 'getadmintcard'])->name('getadmintcard');
+  Route::get('/getadmission', [App\Http\Controllers\frontend\webpageController::class, 'getadmission'])->name('getadmission');
+  Route::get('/getresult', [App\Http\Controllers\frontend\webpageController::class, 'getresult'])->name('getresult');
+
+
+//==============================Clear Route================
+Route::get('/clear', function() {
+
+  Artisan::call('cache:clear');
+  Artisan::call('config:clear');
+  Artisan::call('config:cache');
+  Artisan::call('view:clear');
+
+  return "Cleared!";
+
 });
 
 
 
 
-//==================================Custom Route=========================================
-Route::get('/getcerificate', [App\Http\Controllers\frontend\webpageController::class, 'getcerificate'])->name('getcerificate');
-Route::get('/getadmintcard', [App\Http\Controllers\frontend\webpageController::class, 'getadmintcard'])->name('getadmintcard');
-Route::get('/getadmission', [App\Http\Controllers\frontend\webpageController::class, 'getadmission'])->name('getadmission');
-Route::get('/getresult', [App\Http\Controllers\frontend\webpageController::class, 'getresult'])->name('getresult');
 });

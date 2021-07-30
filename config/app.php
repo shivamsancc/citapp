@@ -166,8 +166,14 @@ return [
         //===============cstom by shivam anand=========================
         Maatwebsite\Excel\ExcelServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
-
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
         Onecentlin\Adminer\ServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Conner\Tagging\Providers\TaggingServiceProvider::class,
+
+
+
 
 
 
@@ -236,12 +242,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
-
         // ==========================cusstom by shivam anad================
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
-
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
 
     ],

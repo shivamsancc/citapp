@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{--============== Meta Dat ============== --}}
-    <title>@yield('title')&nbsp;|&nbsp;{{config('app.name')}}</title>
+    <title>@yield('title')&nbsp;|&nbsp;@isset($master_settings['site_name']){{$master_settings['site_name']}}@endisset</title>
     <meta name="description" content="@yield('meta_discription')">
     <meta name="keywords" content="@yield('meta_keyword')">
     <meta name="author" content="SHIVAM ANAN">
@@ -43,6 +43,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    {!! NoCaptcha::renderJs() !!}
+    {!! csrf_field() !!}
     @yield('header-css')
 </head>
 <body>
@@ -58,8 +60,8 @@
                     <div class="info_wrapper">
                         <div class="contact_info">
         					<ul class="list-unstyled">
-                                <li><i class="flaticon-phone-receiver"></i>+000-2356-222</li>
-                                <li><i class="flaticon-mail-black-envelope-symbol"></i>contact@eduwise.com</li>
+                                <li><i class="flaticon-phone-receiver"></i><a class="text-light" href="tel:@isset($master_settings['site_contact_number']){{$master_settings['site_contact_number']}}@endisset">@isset($master_settings['site_contact_number']){{$master_settings['site_contact_number']}}@endisset</a></li>
+                                <li><i class="flaticon-mail-black-envelope-symbol"></i><a class="text-light" href="mailto:@isset($master_settings['site_email']){{$master_settings['site_email']}}@endisset">@isset($master_settings['site_email']){{$master_settings['site_email']}}@endisset</a></li>
         					</ul>
                         </div>
                         <div class="login_info">
@@ -200,8 +202,8 @@
                         <h3>Contact Us</h3>
                         <p>Ante amet vitae vulputate odio nulla vel pretium aenean.</p>
                         <div class="contact_info">
-                            <span>+000 124 325</span>
-                            <span class="email">info@eduwise.com</span>
+                            <span><a class="text-light" href="tel:@isset($master_settings['site_contact_number']){{$master_settings['site_contact_number']}}@endisset">@isset($master_settings['site_contact_number']){{$master_settings['site_contact_number']}}@endisset</a></span>
+                            <span class="email"><a class="text-light" href="mailto:@isset($master_settings['site_email']){{$master_settings['site_email']}}@endisset">@isset($master_settings['site_email']){{$master_settings['site_email']}}@endisset</a></span>
                         </div>
                         <ul class="social_items d-flex list-unstyled">
                             <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>

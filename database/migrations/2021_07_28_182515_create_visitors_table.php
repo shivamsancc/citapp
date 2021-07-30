@@ -20,6 +20,7 @@ class CreateVisitorsTable extends Migration
             $table->string('method');
             $table->string('path');
             $table->string('cookie');
+            $table->string('user_id')->nullable();
             $table->string('response_code');
             $table->string('response_after');
             $table->timestamps();

@@ -20,6 +20,16 @@ use App\Imports\resultImport;
 //=========================Cusome by shivam===============
 class dashboardController extends Controller
 {
+  public function dashboard(){
+    return view('admin.dashboard');
+  }
+
+
+
+
+
+
+
     public function admissionImport(Request $request)
     {
       if (cit_admission::query()->truncate()) {
