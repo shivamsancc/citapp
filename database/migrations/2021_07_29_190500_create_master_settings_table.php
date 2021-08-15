@@ -14,16 +14,15 @@ class CreateMasterSettingsTable extends Migration
     public function up()
     {
         Schema::create('master_settings', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('type');
-            $table->string('for');
-            $table->text('value');
-            $table->text('parameters')->nullable();
-            $table->string('exone')->nullable();
-            $table->string('extwo')->nullable();
-            $table->string('status')->default('1');
+            $table->increments('id');
+            $table->string('key');
+            $table->string('label');
+            $table->enum('field_type',['text','textarea','color','select','file','url','number','tel','switch'])->default('text');
+            $table->string('value',1000)->nullable()->default('NULL');
+            $table->string('category')->default('general');
+            $table->longtext('options')->nullable();
             $table->timestamps();
+            $table->tinyInteger('flag')->default('1');
         });
     }
 

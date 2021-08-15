@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 //==========================custom code by shivam anand===============
 use DB;
+use Auth;
 use App\Exports\UsersExport;
 use App\Models\cit_certificate;
 use App\Models\cit_admitcard;
@@ -14,6 +15,11 @@ use App\Models\cit_result;
 //==========================custom code by shivam anand===============
 class webpageController extends Controller
 {
+    public function __construct()
+    {
+        \App\system::getmasterdata();
+    }
+
     public function getcerificate(Request $request)
     {
         if (cit_certificate::where('sl_no',$request->sl_no)->first()) {

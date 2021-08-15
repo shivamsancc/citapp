@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{--============== Meta Dat ============== --}}
-    <title>@yield('title')&nbsp;|&nbsp;@isset($master_settings['site_name']){{$master_settings['site_name']}}@endisset</title>
+    <title>@yield('title') &nbsp;|&nbsp;@isset($settings['site_name']){{$settings['site_name']}}@endisset</title>
     <meta name="description" content="@yield('meta_discription')">
     <meta name="keywords" content="@yield('meta_keyword')">
     <meta name="author" content="SHIVAM ANAN">
@@ -38,11 +38,6 @@
     <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/responsive.css">
     <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/demo.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     {!! NoCaptcha::renderJs() !!}
     {!! csrf_field() !!}
     @yield('header-css')
@@ -60,38 +55,24 @@
                     <div class="info_wrapper">
                         <div class="contact_info">
         					<ul class="list-unstyled">
-                                <li><i class="flaticon-phone-receiver"></i><a class="text-light" href="tel:@isset($master_settings['site_contact_number']){{$master_settings['site_contact_number']}}@endisset">@isset($master_settings['site_contact_number']){{$master_settings['site_contact_number']}}@endisset</a></li>
-                                <li><i class="flaticon-mail-black-envelope-symbol"></i><a class="text-light" href="mailto:@isset($master_settings['site_email']){{$master_settings['site_email']}}@endisset">@isset($master_settings['site_email']){{$master_settings['site_email']}}@endisset</a></li>
+                                <li><i class="flaticon-phone-receiver"></i><a class="text-light" href="tel:@isset($settings['site_contact_number']){{$settings['site_contact_number']}}@endisset">@isset($settings['site_contact_number']){{$settings['site_contact_number']}}@endisset</a></li>
+                                <li><i class="flaticon-mail-black-envelope-symbol"></i><a class="text-light" href="mailto:@isset($settings['site_email']){{$settings['site_email']}}@endisset">@isset($settings['site_email']){{$settings['site_email']}}@endisset</a></li>
         					</ul>
-                        </div>
-                        <div class="login_info">
-                             <ul class="d-flex">
-                                <li class="nav-item"><a href="#" class="nav-link sign-in js-modal-show"><i class="flaticon-user-male-black-shape-with-plus-sign"></i>Sign Up</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link join_now js-modal-show"><i class="flaticon-padlock"></i>Login</a></li>
-                            </ul>
-                            <a href="#" title="" class="apply_btn">Apply Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="edu_nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light bg-faded">
-                <a class="navbar-brand" href="index-2.html"><img src="{{asset("vendor/theme/eduwise")}}/images/logo2.png" alt="logo"></a>
+                <a class="navbar-brand" href="{{route('homepage')}}"><img src="{{asset("vendor/theme/eduwise")}}/images/logo2.png" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset"></a>
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
-                        <li class="nav-item"><a href="#" class="nav-link active">Home</a>
-                            <ul class="navbar-nav nav mx-auto">
-                                <li class="nav-item"><a href="index-2.html" class="nav-link">Home Version 01</a></li>
-                                <li class="nav-item"><a href="index-3.html" class="nav-link">Home Version 02</a></li>
-                                <li class="nav-item"><a href="index-4.html" class="nav-link">Home Version 03</a></li>
-                                <li class="nav-item"><a href="index-5.html" class="nav-link">Home Version 04</a></li>
-                            </ul>
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a>
                         </li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="{{route('aboutpage')}}" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="course.html" class="nav-link">Courses</a>
                             <ul class="navbar-nav nav mx-auto">
                                 <li class="nav-item"><a href="course.html" class="nav-link">Courses</a></li>
@@ -152,16 +133,9 @@
             </nav><!-- END NAVBAR -->
         </div>
     </div>
-
-
-    <!--==================
-        Slider
-    ===================-->
 <!--================================= content ====================================================-->
-
 @yield('content')
 <!--================================= content =================================================== -->
-
 <!-- Footer -->
 <footer class="footer_2">
     <div class="container">
@@ -170,7 +144,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="footer_single_col footer_intro">
                         <img src="{{asset("vendor/theme/eduwise")}}/images/logo2.png" alt="" class="f_logo">
-                        <p>Ante amet vitae vulputate odio nulla vel pretium pulvinar aenean. Rhoncus eget adipiscing etiam arcu. Ultricies justo ipsum nec amet.</p>
+                        <p>@isset($settings['footer_logo_below']){{$settings['footer_logo_below']}}@endisset</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-2">
@@ -202,8 +176,8 @@
                         <h3>Contact Us</h3>
                         <p>Ante amet vitae vulputate odio nulla vel pretium aenean.</p>
                         <div class="contact_info">
-                            <span><a class="text-light" href="tel:@isset($master_settings['site_contact_number']){{$master_settings['site_contact_number']}}@endisset">@isset($master_settings['site_contact_number']){{$master_settings['site_contact_number']}}@endisset</a></span>
-                            <span class="email"><a class="text-light" href="mailto:@isset($master_settings['site_email']){{$master_settings['site_email']}}@endisset">@isset($master_settings['site_email']){{$master_settings['site_email']}}@endisset</a></span>
+                            <span><a class="text-light" href="tel:@isset($settings['site_contact_number']){{$settings['site_contact_number']}}@endisset">@isset($settings['site_contact_number']){{$settings['site_contact_number']}}@endisset</a></span>
+                            <span class="email"><a class="text-light" href="mailto:@isset($settings['site_email']){{$settings['site_email']}}@endisset">@isset($settings['site_email']){{$settings['site_email']}}@endisset</a></span>
                         </div>
                         <ul class="social_items d-flex list-unstyled">
                             <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>

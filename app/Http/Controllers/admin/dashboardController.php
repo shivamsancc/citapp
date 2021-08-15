@@ -20,8 +20,14 @@ use App\Imports\resultImport;
 //=========================Cusome by shivam===============
 class dashboardController extends Controller
 {
+  public function __construct()
+    {
+       $this->data= \App\system::getmasterdata();
+    }
+
+
   public function dashboard(){
-    return view('admin.dashboard');
+    return view('admin.dashboard',$this->data);
   }
 
 

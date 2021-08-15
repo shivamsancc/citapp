@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>@yield('title')&nbsp;|&nbsp;@isset($master_settings['site_name']){{$master_settings['site_name']}}@endisset</title>
-    <!-- Meta -->
+    <title>@yield('title')&nbsp;|&nbsp;@isset($settings['site_name']){{$settings['site_name']}}@endisset</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="DashboardKit is modern yet powerful Bootstrap 5 Admin Template comes with thousands of UI components & 180+ pages."/>
-    <meta name="keywords" content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template"/>
-    <meta name="author" content="DashboardKit"/>
-    <!-- Favicon icon -->
+    <meta name="author" content="SHIVAM ANAND"/>
     <link rel="icon" href="{{asset("vendor/theme/admin")}}/assets/images/favicon.svg" type="image/x-icon">
-    <!-- font css -->
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/fonts/feather.css">
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/fonts/fontawesome.css">
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/fonts/material.css">
-    <!-- vendor css -->
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/css/style.css" id="main-style-link">
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/css/customizer.css">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+	@yield('extra-css')
+	@include('admin.layouts.notification')
 </head>
-
 <body class="">
-	<!-- [ Pre-loader ] start -->
 	<div class="loader-bg">
 		<div class="loader-track">
 			<div class="loader-fill"></div>
 		</div>
 	</div>
-	<!-- [ Pre-loader ] End -->
-	<!-- [ Mobile header ] start -->
 	<div class="pc-mob-header pc-header">
 		<div class="pcm-logo">
 			<img src="{{asset("vendor/theme/admin")}}/assets/images/logo.svg" alt="" class="logo logo-lg">
@@ -40,7 +33,6 @@
 						<div class="hamburger-inner"></div>
 					</div>
 				</div>
-				<!-- <i data-feather="menu"></i> -->
 			</a>
 			<a href="#!" class="pc-head-link" id="headerdrp-collapse">
 				<i data-feather="align-right"></i>
@@ -50,9 +42,6 @@
 			</a>
 		</div>
 	</div>
-	<!-- [ Mobile header ] End -->
-
-	<!-- [ navigation menu ] start -->
 	<nav class="pc-sidebar ">
 		<div class="navbar-wrapper">
 			<div class="m-header">
@@ -65,71 +54,13 @@
 			@include('Admin.layouts.navigation')
 		</div>
 	</nav>
-	<!-- [ navigation menu ] end -->
-	<!-- [ Header ] start -->
 	<header class="pc-header ">
 		<div class="header-wrapper">
 			<div class="me-auto pc-mob-drp">
 				<ul class="list-unstyled">
-					<li class="dropdown pc-h-item">
-						<a class="pc-head-link active dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-							Level
-						</a>
-						<div class="dropdown-menu pc-h-dropdown">
-							<a href="#!" class="dropdown-item">
-								<i class="material-icons-two-tone">account_circle</i>
-								<span>My Account</span>
-							</a>
-							<div class="pc-level-menu">
-								<a href="#!" class="dropdown-item">
-									<i class="material-icons-two-tone">list_alt</i>
-									<span class="float-end"><i data-feather="chevron-right" class="me-0"></i></span>
-									<span>Level2.1</span>
-								</a>
-								<div class="dropdown-menu pc-h-dropdown">
-									<a href="#!" class="dropdown-item">
-										<i class="fas fa-circle"></i>
-										<span>My Account</span>
-									</a>
-									<a href="#!" class="dropdown-item">
-										<i class="fas fa-circle"></i>
-										<span>Settings</span>
-									</a>
-									<a href="#!" class="dropdown-item">
-										<i class="fas fa-circle"></i>
-										<span>Support</span>
-									</a>
-									<a href="#!" class="dropdown-item">
-										<i class="fas fa-circle"></i>
-										<span>Lock Screen</span>
-									</a>
-									<a href="#!" class="dropdown-item">
-										<i class="fas fa-circle"></i>
-										<span>Logout</span>
-									</a>
-								</div>
-							</div>
-							<a href="#!" class="dropdown-item">
-								<i class="material-icons-two-tone">settings</i>
-								<span>Settings</span>
-							</a>
-							<a href="#!" class="dropdown-item">
-								<i class="material-icons-two-tone">support</i>
-								<span>Support</span>
-							</a>
-							<a href="#!" class="dropdown-item">
-								<i class="material-icons-two-tone">https</i>
-								<span>Lock Screen</span>
-							</a>
-							<a href="#!" class="dropdown-item">
-								<i class="material-icons-two-tone">chrome_reader_mode</i>
-								<span>Logout</span>
-							</a>
-						</div>
-					</li>
 					<li class="dropdown pc-h-item pc-mega-menu">
 						<a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-							Mega
+							Express Menu
 						</a>
 						<div class="dropdown-menu pc-h-dropdown pc-mega-dmenu">
 							<div class="row g-0">
@@ -188,115 +119,15 @@
 				<ul class="list-unstyled">
 					<li class="dropdown pc-h-item">
 						<a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-							<i class="material-icons-two-tone">search</i>
-						</a>
-						<div class="dropdown-menu dropdown-menu-end pc-h-dropdown drp-search">
-							<form class="px-3">
-								<div class="form-group mb-0 d-flex align-items-center">
-									<i data-feather="search"></i>
-									<input type="search" class="form-control border-0 shadow-none" placeholder="Search here. . .">
-								</div>
-							</form>
-						</div>
-					</li>
-					<li class="dropdown pc-h-item pc-cart-menu">
-						<a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-							<i class="material-icons-two-tone">local_mall</i>
-							<span class="badge bg-success pc-h-badge">3</span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-end pc-h-dropdown drp-cart">
-							<div class="cart-head">
-								<h4 class="mb-0">3 Items</h4>
-								<a href="#!" class="text-danger float-end"><u>Remove All</u></a>
-								<p class="mb-0">in your cart</p>
-							</div>
-							<div class="cart-item">
-								<img src="{{asset("vendor/theme/admin")}}/assets/images/product/prod-1.jpg" alt="Product-img" title="Product-img" class="rounded me-3 border">
-								<div class="cart-desc">
-									<a href="#!" class="text-body">
-										<h6 class="d-inline-block mb-0">Villus Snow Ankle b...</h6>
-									</a>
-									<p class="mb-0">Army green,7</p>
-									<span><span class="text-primary">$ 148.66</span> for <span class="text-primary">9</span> </span>
-									<a href="#!" class="text-danger float-end"><i data-feather="trash-2"></i></a>
-								</div>
-							</div>
-							<div class="cart-item">
-								<img src="{{asset("vendor/theme/admin")}}/assets/images/product/prod-2.jpg" alt="Product-img" title="Product-img" class="rounded me-3 border">
-								<div class="cart-desc">
-									<a href="#!" class="text-body">
-										<h6 class="d-inline-block mb-0">Bullets Wireless Black</h6>
-									</a>
-									<p class="mb-0">Dark Black</p>
-									<span><span class="text-primary">$ 299</span> for <span class="text-primary">5</span> </span>
-									<a href="#!" class="text-danger float-end"><i data-feather="trash-2"></i></a>
-								</div>
-							</div>
-							<div class="cart-item">
-								<img src="{{asset("vendor/theme/admin")}}/assets/images/product/prod-3.jpg" alt="Product-img" title="Product-img" class="rounded me-3 border">
-								<div class="cart-desc">
-									<a href="#!" class="text-body">
-										<h6 class="d-inline-block mb-0">Parkas Thick Jackets</h6>
-									</a>
-									<p class="mb-0">Am Wine Red</p>
-									<span><span class="text-primary">$ 599</span> for <span class="text-primary">3</span> </span>
-									<a href="#!" class="text-danger float-end"><i data-feather="trash-2"></i></a>
-								</div>
-							</div>
-							<div class="table-responsive cart-item">
-								<table class="table table-borderless mb-0 table-xs">
-									<tbody>
-										<tr>
-											<td>
-												<h6 class="m-0">Sub Total:</h6>
-											</td>
-											<td class="text-right">
-												$1070
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<h6 class="m-0">Shipping:</h6>
-											</td>
-											<td class="text-right">
-												FREE
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<h5 class="m-0">Total:</h5>
-											</td>
-											<td class="text-right">
-												<h5 class="m-0 text-primary font-weight-bold">$1070</h5>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="2">
-												<button class="btn btn-primary btn-sm btn-block mt-2">Check out</button>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</li>
-					<li class="pc-h-item">
-						<a class="pc-head-link me-0" href="#" data-bs-toggle="modal" data-bs-target="#notification-modal">
-							<i class="material-icons-two-tone">notifications_active</i>
-							<span class="bg-danger pc-h-badge dots"><span class="sr-only"></span></span>
-						</a>
-					</li>
-					<li class="dropdown pc-h-item">
-						<a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
 							<img src="{{asset("vendor/theme/admin")}}/assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar">
 							<span>
-								<span class="user-name">Joseph William</span>
+								<span class="user-name">{{Auth::user()->name}}</span>
 								<span class="user-desc">Administrator</span>
 							</span>
 						</a>
 						<div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
 							<div class=" dropdown-header">
-								<h5 class="text-overflow m-0"><span class="badge bg-light-success">Pro</span></h5>
+								<h5 class="text-overflow m-0"><span class="badge bg-light-success">Menu</span></h5>
 							</div>
 							<a href="user-profile.html" class="dropdown-item">
 								<i class="material-icons-two-tone">account_circle</i>
@@ -307,7 +138,7 @@
 								<i class="material-icons-two-tone">https</i>
 								<span>Lock Screen</span>
 							</a>
-							<a href="auth-signin-3.html" class="dropdown-item">
+							<a href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item">
 								<i class="material-icons-two-tone">chrome_reader_mode</i>
 								<span>Logout</span>
 							</a>
@@ -496,11 +327,11 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="page-header-title">
-                            <h5 class="m-b-10">Dashboard sale</h5>
+                            <h5 class="m-b-10">Dashboard </h5>
                         </div>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                            <li class="breadcrumb-item">Dashboard sale</li>
+                            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
+                            <li class="breadcrumb-item">@yield('title')</li>
                         </ul>
                     </div>
                 </div>
@@ -512,71 +343,13 @@
         <!-- [ Main Content ] end -->
     </div>
 </div>
+<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+	@csrf
+</form>
 <script src="{{asset("vendor/theme/admin")}}/assets/js/vendor-all.min.js"></script>
 <script src="{{asset("vendor/theme/admin")}}/assets/js/plugins/bootstrap.min.js"></script>
 <script src="{{asset("vendor/theme/admin")}}/assets/js/plugins/feather.min.js"></script>
 <script src="{{asset("vendor/theme/admin")}}/assets/js/pcoded.min.js"></script>
-<!-- Apex Chart -->
-<script src="{{asset("vendor/theme/admin")}}/assets/js/plugins/apexcharts.min.js"></script>
-<script>
-    $('#pct-toggler').on('click', function() {
-        $('.pct-customizer').toggleClass('active');
-    });
-    $('#cust-sidebrand').change(function() {
-        if ($(this).is(":checked")) {
-            $('.theme-color.brand-color').removeClass('d-none');
-            $('.m-header').addClass('bg-dark');
-        } else {
-            $('.m-header').removeClassPrefix('bg-');
-            $('.m-header > .b-brand > .logo-lg').attr('src', '{{asset("vendor/theme/admin")}}/assets/images/logo-dark.svg');
-            $('.theme-color.brand-color').addClass('d-none');
-        }
-    });
-    $('.brand-color > a').on('click', function() {
-        var temp = $(this).attr('data-value');
-        if (temp == "bg-default") {
-            $('.m-header').removeClassPrefix('bg-');
-        } else {
-            $('.m-header').removeClassPrefix('bg-');
-            $('.m-header > .b-brand > .logo-lg').attr('src', '{{asset("vendor/theme/admin")}}/assets/images/logo.svg');
-            $('.m-header').addClass(temp);
-        }
-    });
-    $('.header-color > a').on('click', function() {
-        var temp = $(this).attr('data-value');
-        if (temp == "bg-default") {
-            $('.pc-header').removeClassPrefix('bg-');
-        } else {
-            $('.pc-header').removeClassPrefix('bg-');
-            $('.pc-header').addClass(temp);
-        }
-    });
-    $('#cust-sidebar').change(function() {
-        if ($(this).is(":checked")) {
-            $('.pc-sidebar').addClass('light-sidebar');
-            $('.pc-horizontal .topbar').addClass('light-sidebar');
-        } else {
-            $('.pc-sidebar').removeClass('light-sidebar');
-            $('.pc-horizontal .topbar').removeClass('light-sidebar');
-        }
-    });
-    $('#cust-darklayout').change(function() {
-        if ($(this).is(":checked")) {
-            $("#main-style-link").attr("href", "{{asset("vendor/theme/admin")}}/assets/css/style-dark.css");
-        } else {
-            $("#main-style-link").attr("href", "{{asset("vendor/theme/admin")}}/assets/css/style.css");
-        }
-    });
-    $.fn.removeClassPrefix = function(prefix) {
-        this.each(function(i, it) {
-            var classes = it.className.split(" ").map(function(item) {
-                return item.indexOf(prefix) === 0 ? "" : item;
-            });
-            it.className = classes.join(" ");
-        });
-        return this;
-    };
-</script>
-<script src="{{asset("vendor/theme/admin")}}/assets/js/pages/dashboard-sale.js"></script>
+@yield('extra-js')
 </body>
 </html>

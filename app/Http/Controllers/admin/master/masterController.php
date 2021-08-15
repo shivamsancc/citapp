@@ -7,79 +7,83 @@ use Illuminate\Http\Request;
 
 class masterController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+       $this->data= \App\system::getmasterdata();
+    }
+
     public function index()
     {
-      return view('admin.dashboard');
+        $this->data['mastersetting']=\App\Models\master_setting::getList();
+        return view('admin.master.index',$this->data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        $this->data['field_type'] = ['text','textarea','color','select','file','url','number','tel','switch'];
+        return view('admin.master.create',$this->data);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $setting =\App\Models\master_setting::createsetting($request->all());
+        if (isset($setting)) {
+            return \Redirect::route('master_edit', [$setting])->with('message', 'State saved correctly!!!');
+        }
+        return back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+        $this->data['settingsingel'] =\App\Models\master_setting::getbyID($id);
+        return view('admin.master.edit',$this->data);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+  
     public function update(Request $request, $id)
     {
-        //
+        if ($request->field_type == 'file') {
+            $location= '/setting';
+            $access_type='public';
+            $validator = \Validator::make($request->all() , ['value' => 'required|image|mimes:jpeg,png,jpg,gif,svg', ]);
+           if ($validator->passes()){
+                    $file = $request->file('value');
+                    $name =time().str_replace(' ', '', $file->getClientOriginalName());
+                   $filename= \App\system::fileuploader($location,$name,$file,$access_type);
+                }
+                $valueupdate=env("APP_URL").'/storage/'.$filename;
+        }
+        else{
+            $valueupdate= $request->value;
+        }
+        $result= \App\Models\master_setting::updatebyID($id,$valueupdate);
+
+        if (isset($result)) {
+
+            alert()->success('Data has been saved Prperly push send.', 'Save Sucessfully');
+            return \Redirect::route('master_dashboard');
+        }
+
+        alert()->error('You Data has not been saved Prperly.', 'Something Went Wrong');
+        return \Redirect::route('master_dashboard');
+        
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
-        //
+        $result= \App\Models\master_setting::destroy($id);
+        if (isset($result)) {
+            alert()->success('Data has been Deleted Prperly push send.', 'Deleted Sucessfully');
+            return \Redirect::route('master_dashboard');
+        }
+        alert()->error('You Data has not been Deleted Prperly.', 'Something Went Wrong');
+        return \Redirect::route('master_dashboard');
     }
 }

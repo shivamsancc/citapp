@@ -16,7 +16,53 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['Visitor_log']], function () {
   include('admin_route.php');
   Auth::routes();
+
+
+
+
+
+
+//===================Website Route=========================
   Route::get('/', [App\Http\Controllers\frontend\webSiteController::class, 'index'])->name('homepage');
+  Route::get('/about', [App\Http\Controllers\frontend\webSiteController::class, 'aboutpage'])->name('aboutpage');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //==================================Admins routes=====================================
   Route::middleware(['auth'])->group(function () {

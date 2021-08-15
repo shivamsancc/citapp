@@ -1,3 +1,4 @@
+@section('title','Dasboard')
 @extends('Admin.layouts.app')
 @section('content')
 <div class="row">
@@ -417,4 +418,11 @@
     </div>
     <!-- customer-section end -->
 </div>
+@endsection
+@section('extra-js')
+<script src="{{asset("vendor/theme/admin")}}/assets/js/plugins/apexcharts.min.js"></script>
+<script src="{{asset("vendor/theme/admin")}}/assets/js/vendor-all.min.js"></script>
+<script src="{{asset("vendor/theme/admin")}}/assets/js/pcoded.min.js"></script>
+<!-- Apex Chart -->
+<script src="{{asset("vendor/theme/admin")}}/assets/js/pages/dashboard-sale.js"></script>
 @endsection

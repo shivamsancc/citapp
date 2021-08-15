@@ -21,8 +21,8 @@ class CreateVisitorsTable extends Migration
             $table->string('path');
             $table->string('cookie');
             $table->string('user_id')->nullable();
-            $table->string('response_code');
-            $table->string('response_after');
+            $table->string('response_code')->nullable();
+            $table->string('response_after')->nullable();
             $table->timestamps();
         });
     }
