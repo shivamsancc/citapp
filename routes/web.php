@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => ['Visitor_log']], function () {
+Route::group(['middleware' => ['visitor_log']], function () {
   include('admin_route.php');
   Auth::routes();
 

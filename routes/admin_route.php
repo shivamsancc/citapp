@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => 'admin','middleware' => ['auth','Visitor_log']], function () {
+Route::group(['prefix' => 'admin','middleware' => ['auth','visitor_log']], function () {
 
     Route::get('/dashboard', [App\Http\Controllers\admin\dashboardController::class, 'dashboard'])->name('dashboard');
     //==========================Master Settings=======================
