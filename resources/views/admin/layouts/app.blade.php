@@ -58,7 +58,7 @@
 					<img src="@isset($settings['site_logo']){{$settings['site_logo']}}@endisset" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset" class="logo_header_custom logo logo-sm">
 				</a>
 			</div>
-			@include('Admin.layouts.navigation')
+			@include('admin.layouts.navigation')
 		</div>
 	</nav>
 	<header class="pc-header ">
