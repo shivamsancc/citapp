@@ -1,4 +1,4 @@
-@extends('Admin.layouts.table')
+@extends('admin.layouts.table')
 @section('title','Slider')
 @section('table-content')
 <div class="row">

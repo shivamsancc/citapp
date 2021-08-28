@@ -1,5 +1,5 @@
 @section('title','Create Course Category')
-@extends('Admin.layouts.app')
+@extends('admin.layouts.app')
 @section('content')
 <div class="row">
     <div class="card">

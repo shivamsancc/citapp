@@ -1,5 +1,5 @@
 @section('title','Create Page')
-@extends('Admin.layouts.app')
+@extends('admin.layouts.app')
 @section('extra-css')
 @endsection
 @section('content')

@@ -1,5 +1,5 @@
 @section('title','Create Master Setting')
-@extends('Admin.layouts.app')
+@extends('admin.layouts.app')
 @section('content')
 <div class="row">
     <form action="{{route('master_store')}}" method="POST">@csrf

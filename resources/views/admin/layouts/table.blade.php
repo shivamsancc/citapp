@@ -1,4 +1,4 @@
-@extends('Admin.layouts.app')
+@extends('admin.layouts.app')
 @section('extra-css')
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/css/plugins/dataTables.bootstrap4.min.css">
 @endsection
