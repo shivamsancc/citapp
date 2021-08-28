@@ -38,7 +38,6 @@ class courseController extends Controller
             $name =time().str_replace(' ', '', $file->getClientOriginalName());
             $course_feat_img= \App\system::fileuploader('course',$name,$file,'public');
         }
-        // $course_feat_img=env("APP_URL").'/storage/'.$filename;
         $course =\App\Models\course::createCourse($request->all(),$course_feat_img);
         if (isset($course)) {
 
