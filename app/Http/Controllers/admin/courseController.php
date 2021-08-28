@@ -32,13 +32,11 @@ class courseController extends Controller
 
     
     public function store(Request $request){
-        $location= '/course';
-        $access_type='public';
         $validator = \Validator::make($request->all() , ['course_feat_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg', ]);
         if ($validator->passes()){
             $file = $request->file('course_feat_img');
             $name =time().str_replace(' ', '', $file->getClientOriginalName());
-            $filename= \App\system::fileuploader($location,$name,$file,$access_type);
+            $filename= \App\system::fileuploader('course',$name,$file,'public');
         }
         $course_feat_img=env("APP_URL").'/storage/'.$filename;
         $course =\App\Models\course::createCourse($request->all(),$course_feat_img);
