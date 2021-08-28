@@ -1,5 +1,5 @@
 @section('title','Dasboard')
-@extends('Admin.layouts.app')
+@extends('admin.layouts.app')
 @section('content')
 <div class="row">
     <!-- support-section start -->
