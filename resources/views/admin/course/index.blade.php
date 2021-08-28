@@ -10,7 +10,7 @@
                         <h5>Course</h5>
                     </div>
                     <div class="col">
-                        <a href="{{route('master_create')}}" class="btn btn-outline-primary btn-sm float-end"><i
+                        <a href="{{route('course.create')}}" class="btn btn-outline-primary btn-sm float-end"><i
                                 class="fas fa-plus"></i></a>
                     </div>
                 </div>
@@ -22,16 +22,22 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>Value</th>
+                                <th>Length</th>
+                                <th>Category</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($mastersetting as $item)
+                            @foreach ($course as $item)
                             <tr>
                                 <td>{{$item->id}}</td>
-                                <td>{{$item->label}}</td>
-                                <td>{{$item->value}}</td>
+                                <td>{{$item->course_name}}<br>
+                                   <small class="text-muted"> {{$item->created_at->format('d/m/yy')}}</small>
+                                </td>
+                                <td>{{$item->duration}}&nbsp;Months<br>
+                                    <small class="text-muted">{{$item->no_of_lession}}&nbsp; Lessions</small>
+                                 </td>
+                                <td>{{$item->course_category_name}}</td>
                                 <td>
                                     <a href="{{route('master_edit',$item->id)}}"
                                         class="btn btn-outline-warning btn-sm"><i class="fas fa-pen-alt"></i></a>
@@ -39,7 +45,7 @@
                                         class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

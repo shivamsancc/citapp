@@ -2310,7 +2310,7 @@ footer .shapes1_footer {
   background: #eef1f4;
 }
 .register_area {
-  background: transparent url("../images/banner/counter_bg.jpg") no-repeat center center/cover;
+  background: transparent url("../images/banner/home_banner.jpg") no-repeat center center/cover;
   min-height: 500px;
   position: relative;
   padding: 130px 0;
@@ -5018,7 +5018,7 @@ footer .shapes1_footer {
   width: 100%;
 }
 .about_page .intro_wrapper {
-  background: url("../images/banner/inner_banner_1.jpg") no-repeat center center !important;
+  background: url("../images/banner/citwebsite-header.png") no-repeat center center !important;
 }
 .about_us {
   position: relative;

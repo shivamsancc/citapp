@@ -26,4 +26,8 @@ Route::group(['prefix' => 'admin','middleware' => ['auth','Visitor_log']], funct
     Route::get('/master/download/{id}', [App\Http\Controllers\admin\master\masterController::class, 'download'])->name('master_download');
     Route::resource('/course',  App\Http\Controllers\admin\courseController::class);
     Route::resource('/coursecategory',  App\Http\Controllers\admin\coursecategoryController::class);
+    Route::resource('/slider',  App\Http\Controllers\admin\sliderController::class);
+    Route::resource('/contact_query',  App\Http\Controllers\admin\contact_query::class);
+    Route::resource('/gallery',  App\Http\Controllers\admin\galleryController::class);
+    Route::resource('/page',  App\Http\Controllers\admin\master\pageController::class);
 });

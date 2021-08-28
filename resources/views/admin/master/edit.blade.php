@@ -16,7 +16,7 @@
                             <input type="hidden" name="field_type" id="field_type" value="{{$settingsingel['field_type']}}">
                             <small id="helpId" class="text-muted">Enter Setting Name ex:{{$settingsingel['label']}}</small>
                             @if($settingsingel['field_type'] == 'file')
-                                <br> <a target="_blank" href="{{Storage::url($settingsingel['value'])}}"class="btn btn-outline-primary">View File</a>
+                                <br> <a target="_blank" href="{{$settingsingel['value']}}"class="btn btn-outline-primary">View File</a>
                             @else          
                             @endif
                         </div>

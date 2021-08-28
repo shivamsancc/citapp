@@ -2,7 +2,7 @@
 @extends('Admin.layouts.app')
 @section('extra-css')
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 @endsection
 @section('content')
 <div class="row">
@@ -59,16 +59,16 @@
                         <div class="form-group">
                             <label for="no_of_lession">No of Lessions</label>
                             <input type="text" class="form-control" required name="no_of_lession" id="no_of_lession"
-                                aria-describedby="helpId" placeholder="10">
-                            <small id="helpId" class="form-text text-muted">Help text</small>
+                                aria-describedby="helpId">
+                            <small id="helpId" class="form-text text-muted">Enter the Number of Lession for ex:10</small>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="form-group">
                             <label for="duration">Course Duration</label>
                             <input type="text" class="form-control" required name="duration" id="duration"
-                                aria-describedby="helpId" placeholder="6 Month">
-                            <small id="helpId" class="form-text text-muted">Help text</small>
+                                aria-describedby="helpId" >
+                            <small id="helpId" class="form-text text-muted">Enter the Number of Months Course Will take for ex: 3 Months</small>
                         </div>
                     </div>
                     <div class="col-3">
@@ -118,12 +118,15 @@
 </div>
 @endsection
 @section('extra-js')
-
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script>
     $(document).ready(function () {
         $('#categories').select2();});
-    $(document).ready(function() {$('.summernote').summernote()});
+    // $(document).ready(function() {$('.summernote').summernote()});
+    var quill = new Quill('#course_discription', {theme: 'snow'});
+    var quill = new Quill('#student_learn', {theme: 'snow'});
+    var quill = new Quill('#course_outcome', {theme: 'snow'});
+    var quill = new Quill('#course_curricularm', {theme: 'snow'});
 </script>
 @endsection

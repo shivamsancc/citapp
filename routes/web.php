@@ -24,7 +24,16 @@ Route::group(['middleware' => ['Visitor_log']], function () {
 
 //===================Website Route=========================
   Route::get('/', [App\Http\Controllers\frontend\webSiteController::class, 'index'])->name('homepage');
+  Route::get('/page/{slug}', [App\Http\Controllers\frontend\webSiteController::class, 'dynamicpage'])->name('dynamicpage');
   Route::get('/about', [App\Http\Controllers\frontend\webSiteController::class, 'aboutpage'])->name('aboutpage');
+  Route::get('/course', [App\Http\Controllers\frontend\webSiteController::class, 'coursepage'])->name('coursepage');
+  Route::get('/course/{slug}', [App\Http\Controllers\frontend\webSiteController::class, 'onecoursepage'])->name('onecoursepage');
+  Route::get('/gallery', [App\Http\Controllers\frontend\webSiteController::class, 'gallery'])->name('gallery');
+  Route::get('/gallery/{slug}', [App\Http\Controllers\frontend\webSiteController::class, 'gallerysingle'])->name('gallerysingle');
+  Route::get('/contact', [App\Http\Controllers\frontend\webSiteController::class, 'contact'])->name('contact');
+
+  //===========Post Methods===============================
+  Route::post('/postcontactform', [App\Http\Controllers\frontend\webSiteController::class, 'postcontactform'])->name('postcontactform');
 
 
 

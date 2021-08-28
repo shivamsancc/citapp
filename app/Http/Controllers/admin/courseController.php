@@ -14,6 +14,14 @@ class courseController extends Controller
 
    
     public function index(){
+        $this->data['course']=\App\Models\course::getList();
+        foreach ($this->data['course'] as $inst)
+        {
+            foreach(json_decode($inst->categories,true) as $ins ){
+                $inst->course_category_name = \App\Models\coursecategory::getparentbyID($ins);
+            }  
+        }
+        // dd($this->data['course']);
        return view('admin.course.index', $this->data);
     }
 
@@ -24,8 +32,24 @@ class courseController extends Controller
 
     
     public function store(Request $request){
-        $this->data['coursecategory']=\App\Models\course::create($request->all());
-        // dd($request->all());
+        $location= '/course';
+        $access_type='public';
+        $validator = \Validator::make($request->all() , ['course_feat_img' => 'required|image|mimes:jpeg,png,jpg,gif,svg', ]);
+        if ($validator->passes()){
+            $file = $request->file('course_feat_img');
+            $name =time().str_replace(' ', '', $file->getClientOriginalName());
+            $filename= \App\system::fileuploader($location,$name,$file,$access_type);
+        }
+        $course_feat_img=env("APP_URL").'/storage/'.$filename;
+        $course =\App\Models\course::createCourse($request->all(),$course_feat_img);
+        if (isset($course)) {
+
+            alert()->success('Data has been saved Prperly push send.', 'Save Sucessfully');
+            return \Redirect::route('course.index');
+        }
+
+        alert()->error('You Data has not been saved Prperly.', 'Something Went Wrong');
+        return \Redirect::route('course.index');
     }
 
    

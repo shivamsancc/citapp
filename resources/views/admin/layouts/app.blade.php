@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/css/customizer.css">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	@yield('extra-css')
+	<style>
+		.logo_header_custom{
+			max-width: 215px;
+		}
+	</style>
 	@include('admin.layouts.notification')
 </head>
 <body class="">
@@ -24,7 +29,9 @@
 	</div>
 	<div class="pc-mob-header pc-header">
 		<div class="pcm-logo">
-			<img src="{{asset("vendor/theme/admin")}}/assets/images/logo.svg" alt="" class="logo logo-lg">
+			<a href="{{route('dashboard')}}" class="b-brand">
+				<img src="@isset($settings['site_logo']){{$settings['site_logo']}}@endisset" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset" class="logo logo-lg">
+			</a>
 		</div>
 		<div class="pcm-toolbar">
 			<a href="#!" class="pc-head-link" id="mobile-collapse">
@@ -47,8 +54,8 @@
 			<div class="m-header">
 				<a href="{{route('dashboard')}}" class="b-brand">
 					<!-- ========   change your logo hear   ============ -->
-					<img src="{{asset("vendor/theme/admin")}}/assets/images/logo.svg" alt="" class="logo logo-lg">
-					<img src="{{asset("vendor/theme/admin")}}/assets/images/logo-sm.svg" alt="" class="logo logo-sm">
+					<img src="@isset($settings['site_logo']){{$settings['site_logo']}}@endisset" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset" class="logo_header_custom logo logo-lg">
+					<img src="@isset($settings['site_logo']){{$settings['site_logo']}}@endisset" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset" class="logo_header_custom logo logo-sm">
 				</a>
 			</div>
 			@include('Admin.layouts.navigation')
@@ -68,8 +75,8 @@
 									<h6 class="mega-title">Primitives</h6>
 									<ul class="pc-mega-list">
 										<li><a href="#!" class="dropdown-item"><i class="material-icons-two-tone">account_circle</i><span>My Account</span></a></li>
-										<li><a href="#!" class="dropdown-item"><i class="material-icons-two-tone">settings</i><span>Settings</span></a></li>
-										<li><a href="#!" class="dropdown-item"><i class="material-icons-two-tone">support</i><span>Support</span></a></li>
+										<li><a href="{{route('master_dashboard')}}" class="dropdown-item"><i class="material-icons-two-tone">settings</i><span>Settings</span></a></li>
+										<li><a href="{{route('slider.index')}}" class="dropdown-item"><i class="material-icons-two-tone">burst_mode</i><span>Slider</span></a></li>
 										<li><a href="#!" class="dropdown-item"><i class="material-icons-two-tone">https</i><span>Lock Screen</span></a></li>
 										<li><a href="#!" class="dropdown-item"><i class="material-icons-two-tone">chrome_reader_mode</i><span>Logout</span></a></li>
 										<li><a href="#!" class="dropdown-item"><i class="material-icons-two-tone">movie_creation</i><span>Button</span></a></li>

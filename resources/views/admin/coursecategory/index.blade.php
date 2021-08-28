@@ -30,7 +30,8 @@
                             @foreach ($coursecategory as $item)
                             <tr>
                                 <td>{{$item->id}}</td>
-                                <td>{{$item->category_name}}</td>
+                                <td>{{$item->category_name}}<br>
+                                    <small class="text-muted">{{$item->created_at->format('d/m/yy')}}</small></td>
                                 <td>{{$item->parent_category_name}}</td>
                                 <td>
                                     <a href="{{route('coursecategory.edit',$item->id)}}"class="btn btn-outline-warning btn-sm"><i class="fas fa-pen-alt"></i></a>

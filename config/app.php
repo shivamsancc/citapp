@@ -171,7 +171,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Conner\Tagging\Providers\TaggingServiceProvider::class,
-
+        Barryvdh\Debugbar\ServiceProvider::class, 
 
 
 
@@ -247,7 +247,8 @@ return [
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
-
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+   
 
     ],
 

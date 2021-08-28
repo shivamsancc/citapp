@@ -43,17 +43,5 @@ class visitor_log
                 $newlog->response_after = $end - $start;
                 $newlog->save();
                 return $response;
-
-
-
-
-
-
-
-
-
-
-
-
         }
 }

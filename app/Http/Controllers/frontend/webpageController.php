@@ -17,7 +17,7 @@ class webpageController extends Controller
 {
     public function __construct()
     {
-        \App\system::getmasterdata();
+      $this->data= \App\system::getmasterdata();
     }
 
     public function getcerificate(Request $request)

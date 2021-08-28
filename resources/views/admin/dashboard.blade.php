@@ -64,15 +64,17 @@
                     </div>
                 </div>
                 <div class="col-sm-6 card-body">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <i class="material-icons-two-tone text-primary mb-1">shopping_cart</i>
+                    <a href="{{route('contact_query.index')}}">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <i class="material-icons-two-tone text-primary mb-1">contact_phone</i>
+                            </div>
+                            <div class="col-sm-8 text-md-center">
+                                <h5>{{$active_query}}</h5>
+                                <span>Contact</span>
+                            </div>
                         </div>
-                        <div class="col-sm-8 text-md-center">
-                            <h5>100%</h5>
-                            <span>Order</span>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -157,7 +159,8 @@
         <div class="card">
             <div class="card-body">
                 <h6>Customer Satisfaction</h6>
-                <span>It takes continuous effort to maintain high customer satisfaction levels Internal and external.</span>
+                <span>It takes continuous effort to maintain high customer satisfaction levels Internal and
+                    external.</span>
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col">
                         <div id="satisfaction-chart"></div>
@@ -185,66 +188,87 @@
                             <tbody>
                                 <tr>
                                     <td>HeadPhone</td>
-                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p1.jpg" alt="" class="img-20"></td>
+                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p1.jpg" alt=""
+                                            class="img-20"></td>
                                     <td>
                                         <div><label class="badge bg-light-warning">Pending</label></div>
                                     </td>
                                     <td>$10</td>
-                                    <td><a href="#!"><i class="icon feather icon-edit f-16  text-success"></i></a><a href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a></td>
+                                    <td><a href="#!"><i class="icon feather icon-edit f-16  text-success"></i></a><a
+                                            href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Iphone 6</td>
-                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p2.jpg" alt="" class="img-20"></td>
+                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p2.jpg" alt=""
+                                            class="img-20"></td>
                                     <td>
                                         <div><label class="badge bg-light-danger">Cancel</label></div>
                                     </td>
                                     <td>$20</td>
-                                    <td><a href="#!"><i class="icon feather icon-edit f-16  text-success"></i></a><a href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a></td>
+                                    <td><a href="#!"><i class="icon feather icon-edit f-16  text-success"></i></a><a
+                                            href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Jacket</td>
-                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p3.jpg" alt="" class="img-20"></td>
+                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p3.jpg" alt=""
+                                            class="img-20"></td>
                                     <td>
                                         <div><label class="badge bg-light-success">Success</label></div>
                                     </td>
                                     <td>$35</td>
-                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a></td>
+                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a
+                                            href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Sofa</td>
-                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p4.jpg" alt="" class="img-20"></td>
+                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p4.jpg" alt=""
+                                            class="img-20"></td>
                                     <td>
                                         <div><label class="badge bg-light-danger">Cancel</label></div>
                                     </td>
                                     <td>$85</td>
-                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a></td>
+                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a
+                                            href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Iphone 6</td>
-                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p2.jpg" alt="" class="img-20"></td>
+                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p2.jpg" alt=""
+                                            class="img-20"></td>
                                     <td>
                                         <div><label class="badge bg-light-success">Success</label></div>
                                     </td>
                                     <td>$20</td>
-                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a></td>
+                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a
+                                            href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>HeadPhone</td>
-                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p1.jpg" alt="" class="img-20"></td>
+                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p1.jpg" alt=""
+                                            class="img-20"></td>
                                     <td>
                                         <div><label class="badge bg-light-warning">Pending</label></div>
                                     </td>
                                     <td>$50</td>
-                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a></td>
+                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a
+                                            href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Iphone 6</td>
-                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p2.jpg" alt="" class="img-20"></td>
+                                    <td><img src="{{asset("vendor/theme/admin")}}/assets/images/widget/p2.jpg" alt=""
+                                            class="img-20"></td>
                                     <td>
                                         <div><label class="badge bg-light-danger">Cancel</label></div>
                                     </td>
                                     <td>$30</td>
-                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a></td>
+                                    <td><a href="#!"><i class="icon feather icon-edit f-16 text-success"></i></a><a
+                                            href="#!"><i class="feather icon-trash-2 ms-3 f-16 text-danger"></i></a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -328,7 +352,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted float-end f-14">Just Now</span></h6>
+                                <h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted float-end f-14">Just
+                                        Now</span></h6>
                             </a>
                         </div>
                     </div>
@@ -338,7 +363,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">New order received <span class="text-muted float-end f-14">30 min ago</span></h6>
+                                <h6 class="m-b-5">New order received <span class="text-muted float-end f-14">30 min
+                                        ago</span></h6>
                             </a>
                         </div>
                     </div>
@@ -348,7 +374,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted float-end f-14">Just Now</span></h6>
+                                <h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted float-end f-14">Just
+                                        Now</span></h6>
                             </a>
                         </div>
                     </div>
@@ -358,7 +385,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">You have 4 tasks Done. <span class="text-muted float-end f-14">1 hours ago</span></h6>
+                                <h6 class="m-b-5">You have 4 tasks Done. <span class="text-muted float-end f-14">1 hours
+                                        ago</span></h6>
                             </a>
                         </div>
                     </div>
@@ -368,7 +396,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">You have 2 pending tasks. <span class="text-muted float-end f-14">Just Now</span></h6>
+                                <h6 class="m-b-5">You have 2 pending tasks. <span class="text-muted float-end f-14">Just
+                                        Now</span></h6>
                             </a>
                         </div>
                     </div>
@@ -378,7 +407,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">New order received <span class="text-muted float-end f-14">4 hours ago</span></h6>
+                                <h6 class="m-b-5">New order received <span class="text-muted float-end f-14">4 hours
+                                        ago</span></h6>
                             </a>
                         </div>
                     </div>
@@ -388,7 +418,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">New order Done <span class="text-muted float-end f-14">Just Now</span></h6>
+                                <h6 class="m-b-5">New order Done <span class="text-muted float-end f-14">Just Now</span>
+                                </h6>
                             </a>
                         </div>
                     </div>
@@ -398,7 +429,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">You have 5 pending tasks. <span class="text-muted float-end f-14">5 hours ago</span></h6>
+                                <h6 class="m-b-5">You have 5 pending tasks. <span class="text-muted float-end f-14">5
+                                        hours ago</span></h6>
                             </a>
                         </div>
                     </div>
@@ -408,7 +440,8 @@
                         </div>
                         <div class="col">
                             <a href="#!">
-                                <h6 class="m-b-5">You have 4 tasks Done. <span class="text-muted float-end f-14">2 hours ago</span></h6>
+                                <h6 class="m-b-5">You have 4 tasks Done. <span class="text-muted float-end f-14">2 hours
+                                        ago</span></h6>
                             </a>
                         </div>
                     </div>

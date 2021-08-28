@@ -49,15 +49,12 @@ class masterController extends Controller
     public function update(Request $request, $id)
     {
         if ($request->field_type == 'file') {
-            $location= '/setting';
-            $access_type='public';
             $validator = \Validator::make($request->all() , ['value' => 'required|image|mimes:jpeg,png,jpg,gif,svg', ]);
            if ($validator->passes()){
                     $file = $request->file('value');
                     $name =time().str_replace(' ', '', $file->getClientOriginalName());
-                   $filename= \App\system::fileuploader($location,$name,$file,$access_type);
+                   $valueupdate= \App\system::fileuploader( '/setting',$name,$file,'public');
                 }
-                $valueupdate=env("APP_URL").'/storage/'.$filename;
         }
         else{
             $valueupdate= $request->value;

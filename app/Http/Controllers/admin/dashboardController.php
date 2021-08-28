@@ -27,6 +27,7 @@ class dashboardController extends Controller
 
 
   public function dashboard(){
+    $this->data['active_query']=\App\Models\contact_query::quertcount();
     return view('admin.dashboard',$this->data);
   }
 
