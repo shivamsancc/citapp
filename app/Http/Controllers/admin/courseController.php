@@ -45,7 +45,7 @@ class courseController extends Controller
             return \Redirect::route('course.index');
         }
 
-        alert()->error('You Data has not been saved Prperly.', 'Something Went Wrong');
+        alert()->error('You Data has not been saved Properly.', 'Something Went Wrong');
         return \Redirect::route('course.index');
     }
 
