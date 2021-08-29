@@ -73,7 +73,7 @@
                 <a class="navbar-brand" href="{{route('homepage')}}"><img class="head_logo_custom" src="@isset($settings['site_logo']){{$settings['site_logo']}}@endisset" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset"></a>
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
-                        <li class="nav-item"><a href="#" class="nav-link">Home</a>
+                        <li class="nav-item"><a href="{{route('homepage')}}" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item"><a href="{{route('aboutpage')}}" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="{{route('coursepage')}}" class="nav-link">Courses</a></li>
