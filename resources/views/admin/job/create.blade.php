@@ -1,4 +1,4 @@
-@section('title','Create Job Category')
+@section('title','Create Job')
 @extends('admin.layouts.app')
 @section('extra-css')
 @endsection
@@ -8,7 +8,7 @@
         <div class="card-header">
             <div class="row">
                 <div class="col">
-                    <h5>Create Job Category</h5>
+                    <h5>Create Job</h5>
                 </div>
                 <div class="col">
                 </div>

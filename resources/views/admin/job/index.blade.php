@@ -1,5 +1,5 @@
 @extends('admin.layouts.table')
-@section('title','Gallery')
+@section('title','Job')
 @section('table-content')
 <div class="row">
     <div class="col-sm-12">
@@ -7,7 +7,7 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col">
-                        <h5>Gallery</h5>
+                        <h5>Job</h5>
                     </div>
                     <div class="col">
                         <a href="{{route('job.create')}}" class="btn btn-outline-primary btn-sm float-end"><i
