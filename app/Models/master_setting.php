@@ -52,7 +52,8 @@ class master_setting extends Model
 		$result =self::create([
 			'key'=> $request['key'],
 			'label'=> $request['label'],
-			'field_type'=> $request['field_type']
+			'field_type'=> $request['field_type'],
+			'value'=> null
 		]);
 		return $result->id;
 	}

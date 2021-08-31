@@ -31,7 +31,7 @@
                             <tr>
                                 <td>{{$item->id}}</td>
                                 <td>{{$item->label}}</td>
-                                <td>{{$item->value}}</td>
+                                <td>{{Str::limit($item->value, 65)}}</td>
                                 <td>
                                     <a href="{{route('master_edit',$item->id)}}"
                                         class="btn btn-outline-warning btn-sm"><i class="fas fa-pen-alt"></i></a>

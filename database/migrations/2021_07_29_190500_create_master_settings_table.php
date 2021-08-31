@@ -18,7 +18,7 @@ class CreateMasterSettingsTable extends Migration
             $table->string('key');
             $table->string('label');
             $table->enum('field_type',['text','textarea','color','select','file','url','number','tel','switch'])->default('text');
-            $table->string('value',1000)->nullable()->default('NULL');
+            $table->longtext('value',1000)->nullable();
             $table->string('category')->default('general');
             $table->longtext('options')->nullable();
             $table->timestamps();

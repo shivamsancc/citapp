@@ -12,10 +12,14 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label for="key">{{$settingsingel['label']}}:</label>
-                            <input type="{{$settingsingel['field_type']}}" name="value" id="value" class="form-control" value="{{$settingsingel['value']}}" aria-describedby="helpId">
+                            @if ($settingsingel['field_type'] == 'textarea')
+                                     <textarea name="value" id="value" class="form-control" cols="30" rows="10">{{$settingsingel['value']}}</textarea>
+                            @else
+                                <input type="{{$settingsingel['field_type']}}" name="value" id="value" class="form-control" value="{{$settingsingel['value']}}" aria-describedby="helpId">
+                            @endif
                             <input type="hidden" name="field_type" id="field_type" value="{{$settingsingel['field_type']}}">
                             <small id="helpId" class="text-muted">Enter Setting Name ex:{{$settingsingel['label']}}</small>
-                            @if($settingsingel['field_type'] == 'file')
+                            @if($settingsingel['field_type'] == 'file' && !empty($settingsingel['value']))
                                 <br> <a target="_blank" href="{{$settingsingel['value']}}"class="btn btn-outline-primary">View File</a>
                             @else          
                             @endif

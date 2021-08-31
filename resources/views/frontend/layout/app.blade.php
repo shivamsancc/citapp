@@ -73,17 +73,25 @@
                 <a class="navbar-brand" href="{{route('homepage')}}"><img class="head_logo_custom" src="@isset($settings['site_logo']){{$settings['site_logo']}}@endisset" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset"></a>
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav nav lavalamp ml-auto menu">
-                        <li class="nav-item"><a href="{{route('homepage')}}" class="nav-link">Home</a>
-                        </li>
+                        <li class="nav-item"><a href="{{route('homepage')}}" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="{{route('aboutpage')}}" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="{{route('coursepage')}}" class="nav-link">Courses</a></li>
                         <li class="nav-item"><a href="{{route('gallery')}}" class="nav-link">Gallery</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Student Zone</a>
                             <ul class="navbar-nav nav mx-auto">
-                                <li class="nav-item"><a href="become-a-teacher.html" class="nav-link">Become A Teacher</a></li>
-                                <li class="nav-item"><a href="teacher-profile.html" class="nav-link">Teachers Profile</a></li>
-                                <li class="nav-item"><a href="teachers.html" class="nav-link">Teachers Page</a></li>
-                                <li class="nav-item"><a href="forgot-password.html" class="nav-link">Forgot Password</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Apply For Admission</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Admission Verification</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Admit Card</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Exam</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Result</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Certificate Verification</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Franchises</a>
+                            <ul class="navbar-nav nav mx-auto">
+                                <li class="nav-item"><a href="become-a-teacher.html" class="nav-link">About Franchises</a></li>
+                                <li class="nav-item"><a href="teacher-profile.html" class="nav-link">Become Our Franchises</a></li>
+                                <li class="nav-item"><a href="teachers.html" class="nav-link">Locate Our Franchises</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
