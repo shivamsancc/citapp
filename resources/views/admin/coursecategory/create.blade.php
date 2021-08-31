@@ -36,9 +36,9 @@
                 <div class="form-group">
                   <label for="">Possible Job</label>
                   <select class="form-control" name="possible_job[]" id="possible_job" multiple="multiple">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    @foreach ($jobcategory as $item)
+                        <option value="{{$item->id}}">{{$item->job_name}}</option>
+                    @endforeach
                   </select>
                 </div>
                 <div class="form-group">

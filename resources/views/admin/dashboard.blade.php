@@ -23,7 +23,7 @@
                             <i class="material-icons-two-tone text-primary mb-1">language</i>
                         </div>
                         <div class="col-sm-8 text-md-center">
-                            <h5>$1252</h5>
+                            <h5>₹ 1252</h5>
                             <span>Revenue</span>
                         </div>
                     </div>

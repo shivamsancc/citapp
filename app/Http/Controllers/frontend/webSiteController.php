@@ -15,6 +15,7 @@ class webSiteController extends Controller
     public function index()
     {
         $this->data['course']=\App\Models\course::getList('',6);
+        $this->data['testimonials']=\App\Models\testimonial::getList('',3);
         $this->data['slider']=\App\Models\slider::getList();
         return View('frontend.home',$this->data);
 

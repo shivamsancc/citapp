@@ -30,4 +30,6 @@ Route::group(['prefix' => 'admin','middleware' => ['auth','visitor_log']], funct
     Route::resource('/contact_query',  App\Http\Controllers\admin\contact_query::class);
     Route::resource('/gallery',  App\Http\Controllers\admin\galleryController::class);
     Route::resource('/page',  App\Http\Controllers\admin\master\pageController::class);
+    Route::resource('/job',  App\Http\Controllers\admin\jobController::class);
+    Route::resource('/testimonial',  App\Http\Controllers\admin\testimonialController::class);
 });

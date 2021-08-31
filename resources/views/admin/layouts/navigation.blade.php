@@ -11,7 +11,7 @@
             </ul>
         </li>
         <li class="pc-item pc-hasmenu">
-            <a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">description</i></span><span class="pc-mtext">Page</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+            <a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">description</i></span><span class="pc-mtext">Pa858ge</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
             <ul class="pc-submenu">
                 <li class="pc-item"><a class="pc-link" href="#"><span class="pc-micon"><i class="material-icons-two-tone">library_books</i></span>Course</a></li>
                 <li class="pc-item"><a class="pc-link" href="#"><span class="pc-micon"><i class="material-icons-two-tone">category</i></span>Category</a></li>
@@ -22,7 +22,7 @@
             <ul class="pc-submenu">
                 <li class="pc-item"><a class="pc-link" href="{{route('contact_query.index')}}"><span class="pc-micon"><i class="material-icons-two-tone">contact_page</i></span>Contact Queries</a></li>
                 <li class="pc-item"><a class="pc-link" href="{{route('gallery.index')}}"><span class="pc-micon"><i class="material-icons-two-tone">collections</i></span>Gallery</a></li>
-                <li class="pc-item"><a class="pc-link" href="{{route('coursecategory.index')}}"><span class="pc-micon"><i class="material-icons-two-tone">category</i></span>Category</a></li>
+                <li class="pc-item"><a class="pc-link" href="{{route('testimonial.index')}}"><span class="pc-micon"><i class="material-icons-two-tone">rate_review</i></span>Testimonial</a></li>
             </ul>
         </li>
        <li class="pc-item pc-caption">
@@ -35,6 +35,7 @@
                 <li class="pc-item"><a href="{{route('master_dashboard')}}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">settings</i></span><span class="pc-mtext">Master Setting</span></a></li>
                 <li class="pc-item"><a href="{{route('page.index')}}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">description</i></span><span class="pc-mtext">Page</span></a></li>
                 <li class="pc-item"><a href="{{route('slider.index')}}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">burst_mode</i></span><span class="pc-mtext">Slider</span></a></li>
+                <li class="pc-item"><a href="{{route('job.index')}}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">work_outline</i></span><span class="pc-mtext">Job</span></a></li>
             </ul>
         </li>
       </ul>

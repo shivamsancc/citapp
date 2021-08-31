@@ -26,6 +26,7 @@ class coursecategoryController extends Controller
     public function create()
     {
         $this->data['coursecategory']=\App\Models\coursecategory::getList();
+        $this->data['jobcategory']=\App\Models\job::getList();
         return view('admin.coursecategory.create', $this->data);
     }
 

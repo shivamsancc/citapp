@@ -8,7 +8,7 @@
     <title>@yield('title') &nbsp;|&nbsp;@isset($settings['site_name']){{$settings['site_name']}}@endisset</title>
     <meta name="description" content="@yield('meta_discription')">
     <meta name="keywords" content="@yield('meta_keyword')">
-    <meta name="author" content="SHIVAM ANAN">
+    <meta name="author" content="SHIVAM ANAND">
     {{--============== Meta Dat ============== --}}
     <link rel="shortcut icon" href="{{asset("vendor/theme/eduwise")}}/images/favicon.ico" type="image/x-icon">
     <!-- Goole Font -->
@@ -26,7 +26,6 @@
     <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/assets/animate.css">
     <!-- Slick Carousel -->
     <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/assets/slick.css">
-
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/assets/revolution/layers.css">
     <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/assets/revolution/navigation.css">
@@ -36,7 +35,7 @@
     <!-- main style-->
     <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/style.css">
     <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/responsive.css">
-    <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/demo.css">
+    {{-- <link rel="stylesheet" href="{{asset("vendor/theme/eduwise")}}/css/demo.css"> --}}
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     {!! NoCaptcha::renderJs() !!}
     {!! csrf_field() !!}
@@ -157,7 +156,7 @@
                         <div class="contact_info">
                             <span><a class="text-light" href="tel:@isset($settings['site_contact_number']){{$settings['site_contact_number']}}@endisset">@isset($settings['site_contact_number']){{$settings['site_contact_number']}}@endisset</a></span>
                             <span class="email"><a class="text-light" href="mailto:@isset($settings['site_email']){{$settings['site_email']}}@endisset">@isset($settings['site_email']){{$settings['site_email']}}@endisset</a></span>
-                        </div>
+                        </div><p>Follow Us On.</p>
                         <ul class="social_items d-flex list-unstyled">
                             <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>

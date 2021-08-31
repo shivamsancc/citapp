@@ -71,7 +71,7 @@ class page extends Model
       }
 
 
-      public static function getbyID($id){
+    public static function getbyID($id){
 		$result =self::where('id',$id)
 		->where('flag',1)
 		->first();

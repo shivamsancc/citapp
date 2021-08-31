@@ -171,48 +171,24 @@
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="testimonial_wrapper_4">
+                    @foreach ($testimonials as $item)
                     <div class="testimonial_single">
-                        <p>"I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
-                            was born and I will give you a complete account of the system,<br> and expound the actual
-                            teachings."</p>
+                        <p>" {{Str::limit($item->discription, 238)}} "</p>
                         <div class="reviewer_info">
                             <div class="member-img">
-                                <img src="{{asset("vendor/theme/eduwise")}}/images/team/team_1.jpg" alt="member img"
-                                    class="img-fluid  wow zoomIn" data-wow-duration="2s" data-wow-delay=".2s">
+                                <img src="{{$item->img}}" alt="member img" class="img-fluid  wow zoomIn"
+                                    data-wow-duration="2s" data-wow-delay=".2s">
                             </div>
-                            <h4>Jhone Smith</h4>
-                            <span>Graphic Design</span>
+                            <h4>{{$item->name}}</h4>
+                            <span>{{$item->position}}</span><br>
+                            <span><a href="#" class="text-primary">View All</a></span>
                         </div>
                     </div>
-                    <div class="testimonial_single">
-                        <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                            born and I will give you a complete account of the system, and expound the actual teachings
-                            of the great explorer of the truth, the master-builder of human happiness.</p>
-                        <div class="reviewer_info">
-                            <div class="member-img">
-                                <img src="{{asset("vendor/theme/eduwise")}}/images/team/team_2.jpg" alt="member img"
-                                    class="img-fluid">
-                            </div>
-                            <h4>By Dr. Alex Limon</h4>
-                            <span>Guardian</span>
-                        </div>
-                    </div>
-                    <div class="testimonial_single">
-                        <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                            born and I will give you a complete account of the system, and expound the actual teachings
-                            of the great explorer of the truth, the master-builder of human happiness.</p>
-                        <div class="reviewer_info">
-                            <div class="member-img">
-                                <img src="{{asset("vendor/theme/eduwise")}}/images/team/team_3.jpg" alt="member img"
-                                    class="img-fluid">
-                            </div>
-                            <h4>By Nathen Dived</h4>
-                            <span>Guardian</span>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <div class="shape_wrapper">
         <img src="{{asset("vendor/theme/eduwise")}}/images/shapes/testimonial_2_shpe_2.png" alt="" class="shape_1">
@@ -228,7 +204,7 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="sub_title">
-                    <h2>Latest Eduwise News</h2>
+                    <h2>Latest Citet News</h2>
                     <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam
                         maecenas vel vici quis dictum rutrum nec nisi et.</p>
                 </div><!-- ends: .section-header -->
@@ -251,16 +227,19 @@
                             <li><i class="fas fa-thumbs-up"></i> 0 Like</li>
                         </ul>
                     </div>
-                    <div class="twitter_post">
-                        <div class="blog_title">
-                            <div class="icon_wrapper">
-                                <i class="fab fa-twitter twitt-icon"></i>
+                    <a href="#">
+                        <div class="twitter_post">
+                            <div class="blog_title">
+                                <div class="icon_wrapper">
+                                    <i class="fab fa-twitter twitt-icon"></i>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus
+                                    eget.
+                                    Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
+                                <a href="#" title="">https://t.co/djPsTmfgh</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget.
-                                Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
-                            <a href="#" title="">https://t.co/djPsTmfgh</a>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
