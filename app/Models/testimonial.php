@@ -35,8 +35,10 @@ class testimonial extends Model
 		}
 
 		$result = $query->get();
-
-		return $result;
+		if (!is_null($result)) {
+			return $result;
+		}
+		return null;
 	}
 
 

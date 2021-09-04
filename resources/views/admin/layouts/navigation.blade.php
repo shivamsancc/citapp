@@ -11,9 +11,9 @@
             </ul>
         </li>
         <li class="pc-item pc-hasmenu">
-            <a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">description</i></span><span class="pc-mtext">Pa858ge</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+            <a href="#!" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">article</i></span><span class="pc-mtext">News</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
             <ul class="pc-submenu">
-                <li class="pc-item"><a class="pc-link" href="#"><span class="pc-micon"><i class="material-icons-two-tone">library_books</i></span>Course</a></li>
+                <li class="pc-item"><a class="pc-link" href="{{route('news.index')}}"><span class="pc-micon"><i class="material-icons-two-tone">article</i></span>News</a></li>
                 <li class="pc-item"><a class="pc-link" href="#"><span class="pc-micon"><i class="material-icons-two-tone">category</i></span>Category</a></li>
             </ul>
         </li>

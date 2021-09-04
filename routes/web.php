@@ -31,7 +31,10 @@ Route::group(['middleware' => ['visitor_log']], function () {
   Route::get('/gallery', [App\Http\Controllers\frontend\webSiteController::class, 'gallery'])->name('gallery');
   Route::get('/gallery/{slug}', [App\Http\Controllers\frontend\webSiteController::class, 'gallerysingle'])->name('gallerysingle');
   Route::get('/contact', [App\Http\Controllers\frontend\webSiteController::class, 'contact'])->name('contact');
-
+  Route::resource('/online-admission',  App\Http\Controllers\frontend\crudcontroller\admissionController::class);
+  Route::get('/new-franchise', [App\Http\Controllers\frontend\crudcontroller\franchiseController::class, 'franchiseform'])->name('franchiseform');
+  Route::get('/locate-franchise', [App\Http\Controllers\frontend\crudcontroller\franchiseController::class, 'franchiselocate'])->name('franchiselocate');
+  Route::resource('/franchise',  App\Http\Controllers\frontend\crudcontroller\franchiseController::class);
   //===========Post Methods===============================
   Route::post('/postcontactform', [App\Http\Controllers\frontend\webSiteController::class, 'postcontactform'])->name('postcontactform');
 

@@ -10,7 +10,7 @@ class course extends Model
     use Sluggable;
     use HasFactory;
     protected $table = 'courses';
-	protected $fillable = ['course_name','slug','course_discription','student_learn','course_outcome','no_of_lession','duration','prequisite','certification','categories','course_curricularm','course_feat_img','flag'];
+	protected $fillable = ['course_name','slug','course_discription','price','student_learn','course_outcome','no_of_lession','duration','prequisite','certification','categories','course_curricularm','course_feat_img','flag'];
 
     public function sluggable()
     {
@@ -51,6 +51,7 @@ class course extends Model
 			'prequisite'=> $request['prequisite'],
 			'certification'=> $request['certification'],
 			'course_curricularm'=> $request['course_curricularm'],  
+			'price'=> $request['price'],  
 			'course_feat_img'=> $course_feat_img,  
             'categories'=>json_encode($request['categories']),
 		]);
@@ -67,5 +68,30 @@ class course extends Model
 	}
 
 
+	public static function getbyID($id){
+		$result =self::where('id',$id)
+		->where('flag',1)
+		->first();
+		return 	$result;
+	}
+
+
+	public static function updatebyID($id,$request,$course_feat_img){
+		$result =self::whereId($id)->update([
+			'course_name'=> $request['course_name'],
+			'course_discription'=> $request['course_discription'],
+			'student_learn'=> $request['student_learn'],
+			'course_outcome'=> $request['course_outcome'],
+			'no_of_lession'=> $request['no_of_lession'],
+			'duration'=> $request['duration'],
+			'prequisite'=> $request['prequisite'],
+			'certification'=> $request['certification'],
+			'course_curricularm'=> $request['course_curricularm'],  
+			'price'=> $request['price'],  
+			'course_feat_img'=> $course_feat_img,  
+            'categories'=>json_encode($request['categories']),
+		]);
+		return $result;
+	}
 
 }

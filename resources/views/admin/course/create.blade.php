@@ -91,7 +91,7 @@
                           </select>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
                         <div class="form-group">
                             <label for="categories">Course Category</label>
                             <select class="form-control" name="categories[]" id="categories" required multiple="multiple">
@@ -100,6 +100,13 @@
                                 @endforeach
                             </select>
                             <small id="helpId" class="form-text text-muted">Select Parent Category</small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                          <label for="">Price</label>
+                          <input type="text" class="form-control" name="price" id="price" aria-describedby="helpId" placeholder="1200 ₹">
+                          <small id="helpId" class="form-text text-muted">Enter The Price in INR</small>
                         </div>
                     </div>
                     <div class="col-12">
@@ -119,14 +126,13 @@
 @endsection
 @section('extra-js')
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="https://cdn.ckeditor.com/4.16.2/standard-all/ckeditor.js"></script>
 <script>
-    $(document).ready(function () {
+      $(document).ready(function () {
         $('#categories').select2();});
-    // $(document).ready(function() {$('.summernote').summernote()});
-    var quill = new Quill('#course_discription', {theme: 'snow'});
-    var quill = new Quill('#student_learn', {theme: 'snow'});
-    var quill = new Quill('#course_outcome', {theme: 'snow'});
-    var quill = new Quill('#course_curricularm', {theme: 'snow'});
-</script>
+    CKEDITOR.replace('course_discription', {extraPlugins: 'editorplaceholder',editorplaceholder: 'Start typing here...',removeButtons: 'PasteFromWord'});
+    CKEDITOR.replace('student_learn', {extraPlugins: 'editorplaceholder',editorplaceholder: 'Start typing here...',removeButtons: 'PasteFromWord'});
+    CKEDITOR.replace('course_outcome', {extraPlugins: 'editorplaceholder',editorplaceholder: 'Start typing here...',removeButtons: 'PasteFromWord'});
+    CKEDITOR.replace('course_curricularm', {extraPlugins: 'editorplaceholder',editorplaceholder: 'Start typing here...',removeButtons: 'PasteFromWord'});
+  </script>
 @endsection

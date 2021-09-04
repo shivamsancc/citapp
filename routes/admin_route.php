@@ -32,4 +32,5 @@ Route::group(['prefix' => 'admin','middleware' => ['auth','visitor_log']], funct
     Route::resource('/page',  App\Http\Controllers\admin\master\pageController::class);
     Route::resource('/job',  App\Http\Controllers\admin\jobController::class);
     Route::resource('/testimonial',  App\Http\Controllers\admin\testimonialController::class);
+    Route::resource('/news',  App\Http\Controllers\admin\newsController::class);
 });

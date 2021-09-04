@@ -13,6 +13,24 @@ class master_setting extends Model
     protected $table = 'master_settings';
 	protected $fillable = ['key', 'label', 'field_type','value','category','options'];
 
+
+	public static function gender(){
+		return $gender=[null=>'Select', 'male'=>'MALE','female'=>'Female','other'=>'Others'];
+	}
+
+	public static function maritalstatus(){
+		return $gender=[null=>'Select', 'single'=>'Single','married'=>'Married','divorced'=>'Divorced','widowod'=>'Widowod'];
+	}
+
+	public static function category(){
+		return $gender=[null=>'Select', 'sc'=>'SC','st'=>'ST','ebc'=>'EBC','ews'=>'EWS','general'=>'GENERAL','physicallychallenged'=>'PHYSICALLY CHALLENGED'];
+	}
+
+	public static function proof(){
+		return $gender=[null=>'Select', 'aadhar_card'=>'Aadhar Card','voterid_card'=>'VoterID Card','pan_card'=>'PAN Card','10th_marksheet'=>'10th Marksheet'];
+	}
+
+
     public static function getValues($category='') {
 		$query = DB::table('master_settings')
 						->select('master_settings.*')

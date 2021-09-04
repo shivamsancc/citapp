@@ -49,7 +49,7 @@ class masterController extends Controller
     public function update(Request $request, $id)
     {
         if ($request->field_type == 'file') {
-            $validator = \Validator::make($request->all() , ['value' => 'required|image|mimes:jpeg,png,jpg,gif,svg', ]);
+            $validator = \Validator::make($request->all() , ['value' => 'required|image|mimes:jpeg,png,jpg,gif,svg']);
            if ($validator->passes()){
                     $file = $request->file('value');
                     $name =time().str_replace(' ', '', $file->getClientOriginalName());

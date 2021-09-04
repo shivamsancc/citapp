@@ -15,7 +15,8 @@
                         <div class="pages_links">
                             <a href="{{route('homepage')}}" title="">Home</a>
                             <a href="{{route('coursepage')}}" title="">Course</a>
-                            <a href="#" title="{{$onecoursepage->course_name}}" class="active">{{$onecoursepage->course_name}}</a>
+                            <a href="#" title="{{$onecoursepage->course_name}}"
+                                class="active">{{$onecoursepage->course_name}}</a>
                         </div>
                     </div>
                 </div>
@@ -38,10 +39,9 @@
                     <div class="courses_tab_wrapper">
                         <div class="courses_details_nav_tabs">
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item"><a class="nav-link active" href="#information" role="tab"
-                                        data-toggle="tab">Information</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#curricularm" role="tab"
-                                        data-toggle="tab">Curricularm</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#information" role="tab" data-toggle="tab">Information</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#curricularm" role="tab" data-toggle="tab">Curricularm</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">₹&nbsp; {{ $onecoursepage->price }}</a></li>
                             </ul>
                         </div>
 
@@ -49,16 +49,24 @@
                         <div class="tab_contents tab-content">
                             <div role="tabpanel" class="tab-pane fade in active show" id="information">
                                 <h3>Courses Description <span>:</span></h3>
-                                    {!! $onecoursepage->course_discription !!}
+                                {!! $onecoursepage->course_discription !!}
                                 <h3>Learning Outcomes <span>:</span></h3>
-                                     {!! $onecoursepage->course_outcome !!}
+                                {!! $onecoursepage->course_outcome !!}
                                 <div class="social_wrapper d-flex">
                                     <span>Share : </span>
                                     <ul class="social-items d-flex list-unstyled">
-                                        <li><a href="https://www.facebook.com/sharer.php?u={{ asset('') }}institute/{{$onecoursepage->slug}}"><i class="fab fa-facebook-f fb_icon"></i></a></li>
-                                        <li><a href="https://twitter.com/share?url={{ asset('') }}institute/{{$onecoursepage->slug}}&text={{$onecoursepage->course_name}}&via=NextGyaan.com&hashtags=#NextGyaan"><i class="fab fa-twitter tw_icon"></i></a></li>
-                                        <li><a href="whatsapp://send?text={{ asset('') }}institute/{{$onecoursepage->slug}}  {{$onecoursepage->course_name}}"><i class="fab fa-linkedin-in link_icon"></i></a></li>
-                                        <li><a href="https://www.kooapp.com/create?title={{$onecoursepage->course_name}}  {{ asset('') }}institute/{{$onecoursepage->slug}} &link={{ asset('') }}institute/{{$onecoursepage->slug}}&language=en&handle=nextgyaan_institute_share&utm_source=nextgyaan_institute_share&utm_campaign=nextgyaan_institute_share"><i class="fab fa-instagram in_icon"></i></a></li>
+                                        <li><a
+                                                href="https://www.facebook.com/sharer.php?u={{ asset('') }}institute/{{$onecoursepage->slug}}"><i
+                                                    class="fab fa-facebook-f fb_icon"></i></a></li>
+                                        <li><a
+                                                href="https://twitter.com/share?url={{ asset('') }}institute/{{$onecoursepage->slug}}&text={{$onecoursepage->course_name}}&via=NextGyaan.com&hashtags=#NextGyaan"><i
+                                                    class="fab fa-twitter tw_icon"></i></a></li>
+                                        <li><a
+                                                href="whatsapp://send?text={{ asset('') }}institute/{{$onecoursepage->slug}}  {{$onecoursepage->course_name}}"><i
+                                                    class="fab fa-linkedin-in link_icon"></i></a></li>
+                                        <li><a
+                                                href="https://www.kooapp.com/create?title={{$onecoursepage->course_name}}  {{ asset('') }}institute/{{$onecoursepage->slug}} &link={{ asset('') }}institute/{{$onecoursepage->slug}}&language=en&handle=nextgyaan_institute_share&utm_source=nextgyaan_institute_share&utm_campaign=nextgyaan_institute_share"><i
+                                                    class="fab fa-instagram in_icon"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -67,7 +75,7 @@
                                     <div class="curriculum-section">
                                         <div class="panel-group" id="accordion">
                                             {!! $onecoursepage->course_outcome !!}
-                                        </div> <!-- .curriculum-section-text END -->
+                                        </div> s
                                     </div>
                                 </div>
                             </div>
@@ -85,20 +93,14 @@
                         </div>
                         <div class="features_items">
                             <ul class="list-unstyled">
-                                <li><a href="#" title=""><i class="flaticon-page"></i> Lessons </a><span>69</span></li>
-                                <li><a href="#" title=""><i class="flaticon-eye-open"></i> Viewers</a><span>56</span>
-                                </li>
-                                <li><a href="#" title=""><i class="flaticon-clock-circular-outline"></i>
-                                        Duration</a><span>5H</span></li>
-                                <li><a href="#" title=""><i class="flaticon-padlock"></i> Prequisite</a><span>No</span>
-                                </li>
-                                <li><a href="#" title=""><i class="flaticon-diploma"></i>
-                                        Certificate</a><span>Yes</span></li>
-                                <li><a href="#" title=""><i class="flaticon-language"></i> Language</a><span>Eng</span>
-                                </li>
-                                <li><a href="#" title=""><i class="flaticon-thumbs-up-hand-symbol"></i>
-                                        Skills</a><span>Any</span></li>
-                                <li><a href="#" title=""><i class="flaticon-edit"></i> Assessments</a><span>Yes</span>
+                                <li><a href="#" title=""><i class="flaticon-page"></i> Lessons </a><span>{{$onecoursepage->no_of_lession}} </span></li>
+                                {{-- <li><a href="#" title=""><i class="flaticon-eye-open"></i> Viewers</a><span>56</span></li> --}}
+                                <li><a href="#" title=""><i class="flaticon-clock-circular-outline"></i>Duration</a><span>{{$onecoursepage->duration}} </span></li>
+                                <li><a href="#" title=""><i class="flaticon-padlock"></i> Prequisite</a><span>{{$onecoursepage->prequisite}}</span></li>
+                                <li><a href="#" title=""><i class="flaticon-diploma"></i>Certificate</a><span>{{$onecoursepage->certification}} </span></li>
+                                <li><a href="#" title=""><i class="flaticon-language"></i> Language</a><span>Eng / Hindi</span></li>
+                                {{-- <li><a href="#" title=""><i class="flaticon-thumbs-up-hand-symbol"></i>Skills</a><span>Any</span></li> --}}
+                                {{-- <li><a href="#" title=""><i class="flaticon-edit"></i> Assessments</a><span>Yes</span> --}}
                                 </li>
                             </ul>
                         </div>
@@ -110,7 +112,7 @@
 
                     <div class="recent_post_wrapper popular_courses_post widget_single">
                         <div class="items-title">
-                            <h3 class="title">Our Popular Courses</h3>
+                            <h3 class="title">Our Latest News</h3>
                         </div>
                         <div class="single-post">
                             <div class="recent_img">
@@ -179,7 +181,7 @@
                                 @foreach ($coursecategory as $item)
                                 <li><a href="#" title="{{$item->category_name}}">{{$item->category_name}}</a></li>
                                 @endforeach
-                               
+
                                 {{-- <li><a href="#" title="">Busness</a></li>
                                 <li><a href="#" title="">IT & Software</a></li>
                                 <li><a href="#" title="">Languages</a></li>
@@ -211,8 +213,9 @@
                     @foreach ($course as $item)
                     <div class="single-courses">
                         <div class="courses_banner_wrapper">
-                            <div class="courses_banner"><a href="{{route('onecoursepage',$item->slug)}}"><img src="{{$item->course_feat_img}}"
-                                        alt="{{$item->course_name}}" class="img-fluid"></a></div>
+                            <div class="courses_banner"><a href="{{route('onecoursepage',$item->slug)}}"><img
+                                        src="{{$item->course_feat_img}}" alt="{{$item->course_name}}"
+                                        class="img-fluid"></a></div>
                         </div>
                         <div class="courses_info_wrapper">
                             <div class="courses_title">
@@ -221,7 +224,7 @@
                             <div class="courses_info">
                                 <ul class="list-unstyled">
                                     <li><i class="fas fa-calendar-alt"></i>{{$item->duration}}&nbsp;Months</li>
-                                <li><i class="fas fa-book"></i>{{$item->no_of_lession}} &nbsp; Lessions</li>
+                                    <li><i class="fas fa-book"></i>{{$item->no_of_lession}} &nbsp; Lessions</li>
                                 </ul>
                                 <a href="{{route('onecoursepage',$item->slug)}}" class="cart_btn">View Details</a>
                             </div>

@@ -161,6 +161,7 @@
     </div>
 </section> <!-- ./ End Courses Area section -->
 @include('frontend.layout.counter_form')
+@if(!$testimonials->isEmpty())
 <section class="testimonial_2">
     <div class="container">
         <div class="row">
@@ -191,11 +192,13 @@
     </div>
     </div>
     <div class="shape_wrapper">
-        <img src="{{asset("vendor/theme/eduwise")}}/images/shapes/testimonial_2_shpe_2.png" alt="" class="shape_1">
-        <img src="{{asset("vendor/theme/eduwise")}}/images/shapes/testimonial_2_shpe_3.png" alt="" class="shape_2">
-        <img src="{{asset("vendor/theme/eduwise")}}/images/shapes/testimonial_2_shpe_1.png" alt="" class="shape_3">
+        <img src="{{asset("vendor/theme/eduwise")}}/images/shapes/testimonial_2_shpe_2.png" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset" class="shape_1">
+        <img src="{{asset("vendor/theme/eduwise")}}/images/shapes/testimonial_2_shpe_3.png" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset" class="shape_2">
+        <img src="{{asset("vendor/theme/eduwise")}}/images/shapes/testimonial_2_shpe_1.png" alt="@isset($settings['site_name']){{$settings['site_name']}}@endisset" class="shape_3">
     </div>
-</section><!-- End Testimonial -->
+</section>
+@endif
+<!-- End Testimonial -->
 
 
 
