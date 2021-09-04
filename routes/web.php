@@ -38,7 +38,11 @@ Route::group(['middleware' => ['visitor_log']], function () {
   //===========Post Methods===============================
   Route::post('/postcontactform', [App\Http\Controllers\frontend\webSiteController::class, 'postcontactform'])->name('postcontactform');
 
-
+ //==================================Student Route=========================================
+ Route::get('/cerificate_verification', [App\Http\Controllers\frontend\studentController::class, 'certificate'])->name('getcerificate');
+ Route::get('/admintcard_download', [App\Http\Controllers\frontend\studentController::class, 'admitcard'])->name('getadmintcard');
+ Route::get('/admission_verification', [App\Http\Controllers\frontend\studentController::class, 'admission'])->name('getadmission');
+ Route::get('/result_download', [App\Http\Controllers\frontend\studentController::class, 'result'])->name('getresult');
 
 
 
@@ -88,10 +92,10 @@ Route::group(['middleware' => ['visitor_log']], function () {
 
 
   //==================================Custom Route=========================================
-  Route::get('/getcerificate', [App\Http\Controllers\frontend\webpageController::class, 'getcerificate'])->name('getcerificate');
-  Route::get('/getadmintcard', [App\Http\Controllers\frontend\webpageController::class, 'getadmintcard'])->name('getadmintcard');
-  Route::get('/getadmission', [App\Http\Controllers\frontend\webpageController::class, 'getadmission'])->name('getadmission');
-  Route::get('/getresult', [App\Http\Controllers\frontend\webpageController::class, 'getresult'])->name('getresult');
+  Route::get('/getcerificatesubmit', [App\Http\Controllers\frontend\webpageController::class, 'getcerificate'])->name('getcerificatesubmit');
+  Route::get('/getadmintcardsubmit', [App\Http\Controllers\frontend\webpageController::class, 'getadmintcard'])->name('getadmintcardsubmit');
+  Route::get('/getadmissionsubmit', [App\Http\Controllers\frontend\webpageController::class, 'getadmission'])->name('getadmissionsubmit');
+  Route::get('/getresultsubmit', [App\Http\Controllers\frontend\webpageController::class, 'getresult'])->name('getresultsubmit');
 
 
 //==============================Clear Route================

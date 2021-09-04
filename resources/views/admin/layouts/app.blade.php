@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="SHIVAM ANAND"/>
-    <link rel="icon" href="{{asset("vendor/theme/admin")}}/assets/images/favicon.svg" type="image/x-icon">
+	<link rel="shortcut icon" href="@isset($settings['favicon']){{$settings['favicon']}}@endisset" type="image/x-icon">
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/fonts/feather.css">
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/fonts/fontawesome.css">
     <link rel="stylesheet" href="{{asset("vendor/theme/admin")}}/assets/fonts/material.css">

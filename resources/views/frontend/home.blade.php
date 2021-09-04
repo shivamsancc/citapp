@@ -37,8 +37,9 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="sub_title">
                     <h2>Unlimited Possibilities</h2>
-                    <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam
-                        maecenas vel vici quis dictum rutrum nec nisi et.</p>
+                    <p>When you join the large and empowred family of CITET you will find 
+                        Unilimited Possibilitites to grow your self and make the mark in the world.
+                    </p>
                 </div><!-- ends: .section-header -->
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
@@ -47,9 +48,9 @@
                         <i class="flaticon-student"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Next Scheduled</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <h3><a href="#" title="">Smart Way of Learning</a></h3>
+                        <p>Here at CITET we use smart way to teach the students the requied skills and 
+                            we make sure it by doing multiple Practicle Sessions.</p>
                     </div>
                 </div>
             </div>
@@ -59,9 +60,9 @@
                         <i class="flaticon-university"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Online Courses</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <h3><a href="#" title="">Nearby Locations</a></h3>
+                        <p>CITET is spread in all over the india to let the students easily find and get 
+                            the admission and study in  their native language.</p>
                     </div>
                 </div>
             </div>
@@ -71,9 +72,9 @@
                         <i class="flaticon-diploma"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Education Equip</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <h3><a href="#" title="">Global Certification</a></h3>
+                        <p>CITET is Certified by ISO 9001:2008 and registered Under the Indian Trust 
+                            Act 1882 which it's makes the Certificaion more valuable.</p>
                     </div>
                 </div>
             </div>
@@ -89,10 +90,10 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-5">
                 <div class="title">
                     <h2>Take The First Step To Learn With Us.</h2>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                        deleniti atque corrupti quos esentium voluptatum delenitamus et iusto odio dignissimos ducimus
-                        qui blanditiis pri atqueint. </p>
-                    <a href="#" title="">Learn More</a>
+                    <p>At CITET we have multiple and multi directions of courses to learn and grow youself.
+                        You can choose form the various of the coures to findout which will make you more 
+                        profitable and more Knowledgable. </p>
+                    <a href="{{route('coursepage')}}" title="">View Courses</a>
                 </div>
             </div>
         </div>
@@ -125,8 +126,8 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="sub_title">
                     <h2>Our Popular Courses</h2>
-                    <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam
-                        maecenas vel vici quis dictum rutrum nec nisi et.</p>
+                    <p>Here the some of the latest added the course from which
+                        you can select.</p>
                 </div><!-- ends: .section-header -->
             </div>
             @foreach ($course as $item)
@@ -208,24 +209,25 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="sub_title">
                     <h2>Latest Citet News</h2>
-                    <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam
-                        maecenas vel vici quis dictum rutrum nec nisi et.</p>
+                    <p>Here some latest news form the CITET</p>
                 </div><!-- ends: .section-header -->
             </div>
 
+            @foreach ($news as $item)
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                 <div class="single_item">
-                    <div class="item_wrapper">
+                    <div class="item_wrapper" style="    min-width: 383px;
+                    min-height: 353px;">
                         <div class="blog-img">
                             <a href="#" title=""><img
-                                    src="{{asset("vendor/theme/eduwise")}}/images/courses/courses_5.jpg" alt=""
+                                    src="{{$item->feat_img}}" style="max-height: 421px;max-width:262px;" alt=""
                                     class="img-fluid"></a>
                         </div>
                         <h3><a href="#" title="">How to Become Master In CSS within qa Week.</a></h3>
                     </div>
                     <div class="blog_title">
                         <ul class="post_bloger">
-                            <li><i class="fas fa-user"></i>Jhon Dheo</li>
+                            <li><i class="fas fa-user"></i>CITET</li>
                             <li><i class="fas fa-comment"></i>0 Comments</li>
                             <li><i class="fas fa-thumbs-up"></i> 0 Like</li>
                         </ul>
@@ -245,153 +247,7 @@
                     </a>
                 </div>
             </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="single_item">
-                    <div class="item_wrapper">
-                        <div class="blog-img">
-                            <a href="#" title=""><img
-                                    src="{{asset("vendor/theme/eduwise")}}/images/courses/courses_6.jpg" alt=""
-                                    class="img-fluid"></a>
-                        </div>
-                        <h3><a href="#" title="">Students work together to solve a problem</a></h3>
-                    </div>
-                    <div class="blog_title">
-                        <ul class="post_bloger">
-                            <li><i class="fas fa-user"></i>Jhon Dheo</li>
-                            <li><i class="fas fa-comment"></i>0 Comments</li>
-                            <li><i class="fas fa-thumbs-up"></i> 0 Like</li>
-                        </ul>
-                    </div>
-                    <div class="twitter_post">
-                        <div class="blog_title">
-                            <div class="icon_wrapper">
-                                <i class="fab fa-twitter twitt-icon"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget.
-                                Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
-                            <a href="#" title="">https://t.co/djPsTmfgh</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="single_item">
-                    <div class="item_wrapper">
-                        <div class="blog-img">
-                            <a href="#" title=""><img
-                                    src="{{asset("vendor/theme/eduwise")}}/images/courses/courses_4.jpg" alt=""
-                                    class="img-fluid"></a>
-                        </div>
-                        <h3><a href="#" title="">Magazine Design Start to Finish The Cover</a></h3>
-                    </div>
-                    <div class="blog_title">
-                        <ul class="post_bloger">
-                            <li><i class="fas fa-user"></i>Jhon Dheo</li>
-                            <li><i class="fas fa-comment"></i>0 Comments</li>
-                            <li><i class="fas fa-thumbs-up"></i> 0 Like</li>
-                        </ul>
-                    </div>
-                    <div class="twitter_post">
-                        <div class="blog_title">
-                            <div class="icon_wrapper">
-                                <i class="fab fa-twitter twitt-icon"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget.
-                                Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
-                            <a href="#" title="">https://t.co/djPsTmfgh</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="single_item">
-                    <div class="item_wrapper">
-                        <div class="blog-img">
-                            <a href="#" title=""><img
-                                    src="{{asset("vendor/theme/eduwise")}}/images/courses/courses_3.jpg" alt=""
-                                    class="img-fluid"></a>
-                        </div>
-                        <h3><a href="#" title="">Magazine Design Start to Finish The Cover</a></h3>
-                    </div>
-                    <div class="blog_title">
-                        <ul class="post_bloger">
-                            <li><i class="fas fa-user"></i>Jhon Dheo</li>
-                            <li><i class="fas fa-comment"></i>0 Comments</li>
-                            <li><i class="fas fa-thumbs-up"></i> 0 Like</li>
-                        </ul>
-                    </div>
-                    <div class="twitter_post">
-                        <div class="blog_title">
-                            <div class="icon_wrapper">
-                                <i class="fab fa-twitter twitt-icon"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget.
-                                Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
-                            <a href="#" title="">https://t.co/djPsTmfgh</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="single_item">
-                    <div class="item_wrapper">
-                        <div class="blog-img">
-                            <a href="#" title=""><img
-                                    src="{{asset("vendor/theme/eduwise")}}/images/courses/courses_1.jpg" alt=""
-                                    class="img-fluid"></a>
-                        </div>
-                        <h3><a href="#" title="">Adobe Dimension Essential Training The Basics</a></h3>
-                    </div>
-                    <div class="blog_title">
-                        <ul class="post_bloger">
-                            <li><i class="fas fa-user"></i>Jhon Dheo</li>
-                            <li><i class="fas fa-comment"></i>0 Comments</li>
-                            <li><i class="fas fa-thumbs-up"></i> 0 Like</li>
-                        </ul>
-                    </div>
-                    <div class="twitter_post">
-                        <div class="blog_title">
-                            <div class="icon_wrapper">
-                                <i class="fab fa-twitter twitt-icon"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget.
-                                Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
-                            <a href="#" title="">https://t.co/djPsTmfgh</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="single_item">
-                    <div class="item_wrapper">
-                        <div class="blog-img">
-                            <a href="#" title=""><img
-                                    src="{{asset("vendor/theme/eduwise")}}/images/courses/courses_2.jpg" alt=""
-                                    class="img-fluid"></a>
-                        </div>
-                        <h3><a href="#" title="">How to Become Master In CSS within qa Week.</a></h3>
-                    </div>
-                    <div class="blog_title">
-                        <ul class="post_bloger">
-                            <li><i class="fas fa-user"></i>Jhon Dheo</li>
-                            <li><i class="fas fa-comment"></i>0 Comments</li>
-                            <li><i class="fas fa-thumbs-up"></i> 0 Like</li>
-                        </ul>
-                    </div>
-                    <div class="twitter_post">
-                        <div class="blog_title">
-                            <div class="icon_wrapper">
-                                <i class="fab fa-twitter twitt-icon"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget.
-                                Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
-                            <a href="#" title="">https://t.co/djPsTmfgh</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 </section><!-- End Blog -->

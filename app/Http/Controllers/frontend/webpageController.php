@@ -27,7 +27,7 @@ class webpageController extends Controller
            return view('student/certificate' ,compact('flights'));
        }else{
          alert()->error('You Data has not been found.', 'Certificate Not Found');
-         return redirect()->route('homepage');
+         return redirect()->back();
        }
 
     }
@@ -38,7 +38,7 @@ class webpageController extends Controller
           return view('student/admitcard' ,compact('flights'));
         }else{
           alert()->error('You Data has not been found.', 'Admitcard Not Found');
-          return redirect()->route('homepage');
+          return redirect()->back();
         }
 
     }
@@ -46,6 +46,7 @@ class webpageController extends Controller
 
     public function getadmission(Request $request)
     {
+      
         $flight = cit_admitcard::where('regno',$request->regno)->first();
         $flights = cit_admission::where('regno',$request->regno)->get();
 
@@ -59,7 +60,7 @@ class webpageController extends Controller
             return view('student/result' ,compact('flights'));
         }else{
           alert()->error('You Data has not been found.', 'Result Not Found');
-          return redirect()->route('homepage');
+          return redirect()->back();
         }
 
 

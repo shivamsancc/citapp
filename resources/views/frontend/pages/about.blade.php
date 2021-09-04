@@ -27,7 +27,7 @@
             <div class="col-12 col-sm-12 col-md-7 col-lg-7">
                 <div class="about_title">
                     <span>About Us</span>
-                    <h2>The most gorgeous online schools are built Eduwise</h2>
+                    <h2>The most amazing Computer Institute Ever Exised.</h2>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-5 col-lg-5 p-0">
@@ -45,12 +45,17 @@
             </div>
             <div class="col-12 col-sm-12 col-md-7 col-lg-7">
                 <div class="about_content">
-                    <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam
-                        maecenas vel vici quis dictum rutrum nec nisi et.Lorem ipsum dolor sit amet mollis felis dapibus
-                        arcu donec viverra. Pede phasellus eget. Etiam maecenas vel vici quis dictum rutrum nec nisi
-                        et.Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget.
-                        Etiam maecenas vel vici quis dictum rutrum nec nisi et.</p>
-                    <a href="#" title="">Read More About Us <i class="fas fa-angle-right"></i></a>
+                    <p>COMPUTER INSTITUTE OF TECHNOLOGY & EDUCATIONAL TRUST is the best institute for Technical
+                        education, especially in Information Technology. The main aim of the establishment of this
+                        institution is to spread computer education to all over India. Our Organization has been
+                        Registered Under Indian Trust act 1882 by Govt. of Bihar and decided to provide the Computer
+                        Education in nominal charge for every person of our lower and middle class of society. C.I.T
+                        EDUCATIONAL TRUST is an ISO 9001:2015 Certified Organization by Joint Accreditation Conformity
+                        Board for certificate Bodies(ACBCB). The Organization has a mission and prime goal of providing
+                        quality It education to Students and also what an IT Profession need by creating differently
+                        skilled which is needed by It Professionals in the country. The Organization Provides education
+                        & Certification in Computer Software/ Hardware, Computer Accounting, Computer Networking &
+                        Mobile Technology.</p>
                 </div>
             </div>
         </div>
@@ -65,8 +70,9 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="sub_title">
                     <h2>Unlimited Possibilities</h2>
-                    <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam
-                        maecenas vel vici quis dictum rutrum nec nisi et.</p>
+                    <p>When you join the large and empowred family of CITET you will find
+                        Unilimited Possibilitites to grow your self and make the mark in the world.
+                    </p>
                 </div><!-- ends: .section-header -->
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
@@ -75,9 +81,9 @@
                         <i class="flaticon-student"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Learn anywhere</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <h3><a href="#" title="">Smart Way of Learning</a></h3>
+                        <p>Here at CITET we use smart way to teach the students the requied skills and
+                            we make sure it by doing multiple Practicle Sessions.</p>
                     </div>
                 </div>
             </div>
@@ -87,9 +93,9 @@
                         <i class="flaticon-university"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Our Mission</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <h3><a href="#" title="">Nearby Locations</a></h3>
+                        <p>CITET is spread in all over the india to let the students easily find and get
+                            the admission and study in their native language.</p>
                     </div>
                 </div>
             </div>
@@ -99,21 +105,22 @@
                         <i class="flaticon-diploma"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Diploma Course</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <h3><a href="#" title="">Global Certification</a></h3>
+                        <p>CITET is Certified by ISO 9001:2008 and registered Under the Indian Trust
+                            Act 1882 which it's makes the Certificaion more valuable.</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                 <div class="single_item single_item_center">
                     <div class="icon_wrapper">
                         <i class="flaticon-atom"></i>
                     </div>
                     <div class="blog_title">
-                        <h3><a href="#" title="">Physical Activity</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <h3><a href="#" title="">Practicle Activity</a></h3>
+                        <p>We belive the Practicle knowledge grow more then the treditional knowledge 
+                            thats why we focus more on Practicle knowlege more then Theory.</p>
                     </div>
                 </div>
             </div>
@@ -124,8 +131,8 @@
                     </div>
                     <div class="blog_title">
                         <h3><a href="#" title="">Book Library</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <p>We provide the required books and notes to the students to  practicle and remember the 
+                            Skills whenever they requred to call it or to share .</p>
                     </div>
                 </div>
             </div>
@@ -136,8 +143,8 @@
                     </div>
                     <div class="blog_title">
                         <h3><a href="#" title="">Love & Care</a></h3>
-                        <p>Lorem ipsum dolor consectetur sed do tempor incididunt ut laboris ut aliquip ex commodo nt ut
-                            laboris ut aliquip ex commodo conquat.</p>
+                        <p>We love and care our students and their amazing trought process which makes their life better
+                            and put a big smile on our Face.</p>
                     </div>
                 </div>
             </div>
@@ -146,62 +153,6 @@
 </section><!-- End Popular Courses -->
 
 @include('frontend.layout.counter_form')
-<section class="out_count_student">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="sub_title">
-                    <h2>Everything Is Eduwise</h2>
-                    <p>Lorem ipsum dolor sit amet mollis felis dapibus arcu donec viverra. Pede phasellus eget. Etiam
-                        maecenas vel vici quis dictum rutrum nec nisi et.</p>
-                </div><!-- ends: .section-header -->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="counter_wrapper">
-                    <div class="counter_single_wrapper">
-                        <div class="section count_single">
-                            <div class="project-count"><span class="counter">1200 </span><span
-                                    class="count_icon">+</span></div>
-                            <span>Active students</span>
-                        </div>
-                    </div>
-
-                    <div class="counter_single_wrapper">
-                        <div class="section count_single">
-                            <div class="project-count"><span class="counter">1300 </span><span
-                                    class="count_icon">+</span></div>
-                            <span>Online Courses</span>
-                        </div>
-                    </div>
-
-                    <div class="counter_single_wrapper">
-                        <div class="section count_single">
-                            <div class="project-count"><span class="counter">1050 </span><span
-                                    class="count_icon">+</span></div>
-                            <span>Satisfaction</span>
-                        </div>
-                    </div>
-
-                    <div class="counter_single_wrapper">
-                        <div class="section count_single">
-                            <div class="project-count"><span class="counter">1500 </span><span
-                                    class="count_icon">+</span></div>
-                            <span>Fraduates</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg_shapes">
-
-    </div>
-</section><!-- End Testimonial -->
-
-
-
 <section class="faq_about">
     <div class="container">
         <div class="row">

@@ -172,6 +172,8 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Conner\Tagging\Providers\TaggingServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class, 
+        Ladumor\OneSignal\OneSignalServiceProvider::class,
+
 
 
 
@@ -248,6 +250,8 @@ return [
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'OneSignal' => \Ladumor\OneSignal\OneSignal::class,
+
    
 
     ],

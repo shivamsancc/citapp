@@ -11,7 +11,7 @@
     <meta name="keywords" content="@yield('meta_keyword')">
     <meta name="author" content="SHIVAM ANAND">
     {{--============== Meta Dat ============== --}}
-    <link rel="shortcut icon" href="{{asset("vendor/theme/eduwise")}}/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="@isset($settings['favicon']){{$settings['favicon']}}@endisset" type="image/x-icon">
     <!-- Goole Font -->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -328,9 +328,9 @@
                                 <h3>information</h3>
                                 <ul class="quick_inf0">
                                     <li><a href="#">Leadereship</a></li>
-                                    <li><a href="#">Company</a></li>
-                                    <li><a href="#">Diversity</a></li>
-                                    <li><a href="#">Jobs</a></li>
+                                    <li><a href="{{route('aboutpage')}}">About</a></li>
+                                    <li><a href="{{route('contact')}}">Contact</a></li>
+                                    <li><a href="#">News</a></li>
                                     <li><a href="#">Press</a></li>
                                 </ul>
                             </div>
@@ -347,9 +347,9 @@
                                 </div>
                                 <p>Follow Us On.</p>
                                 <ul class="social_items d-flex list-unstyled">
-                                    <li><a href="#"><i class="fab fa-facebook-f fb-icon"></i></a></li>
+                                    <li><a href="http://facebook.com/CITEducationaltrust/" target="_blank"><i class="fab fa-facebook-f fb-icon"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter twitt-icon"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-linkedin-in link-icon"></i></a></li>
+                                    <li><a href="https://t.me/citetshc" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
                                     <li><a href="#"><i class="fab fa-instagram ins-icon"></i></a></li>
                                 </ul>
                             </div>
