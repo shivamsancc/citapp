@@ -37,5 +37,14 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        $this->data= \App\system::getmasterdata();
+    }
+
+
+
+
+    public function showLoginForm()
+    {
+        return view('auth.login', $this->data);
     }
 }

@@ -20,7 +20,7 @@
                             <h3 style='font-size: 40px;'>Certificate</h3>
                         </td>
                         <td width=33%>Cert. No: {{$flights['0']->cert_no}}&nbsp;&nbsp;<img
-                                src='https://api.qrserver.com/v1/create-qr-code/?data=https://citet.org/vfm/apps/get-cert.php?SlNo={{$flights['0']->sl_no}}&result=Submit&size=100x100'
+                                src='https://api.qrserver.com/v1/create-qr-code/?data={{route('getcerificatesubmit')}}?SlNo={{$flights['0']->sl_no}}&result=Submit&size=100x100'
                                 alt='' width='100px' height='100px'>
                         </td>
                     </tr>

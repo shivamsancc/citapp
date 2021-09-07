@@ -4,8 +4,7 @@
     <div class="row m-0 p-0">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
+                <div class="card-header">{{ __('Dashboard') }}</div><b><a href="{{route('dashboard')}}">Back to master Dashboard</a></b>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

@@ -12,7 +12,7 @@
     <h2 style='text-align:center;'>Results</h2>
     <h3 style='text-align:center;'>TEE (Term End Examination)</h3>
     <center>
-        <img src='https://api.qrserver.com/v1/create-qr-code/?{{route('getresult')}}?roll={{$flights['0']->roll}}{{$flights['0']->roll}}&result=Submit&size=100x100'
+        <img src='https://api.qrserver.com/v1/create-qr-code/?data={{route('getresultsubmit')}}?roll={{$flights['0']->roll}}&result=Submit&size=100x100'
             alt='' width='100px' height='100px'>
     </center>
     <br />

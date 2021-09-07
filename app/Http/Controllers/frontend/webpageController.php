@@ -24,7 +24,7 @@ class webpageController extends Controller
     {
         if (cit_certificate::where('sl_no',$request->sl_no)->first()) {
           $flights = cit_certificate::where('sl_no',$request->sl_no)->get();
-           return view('student/certificate' ,compact('flights'));
+           return view('student/certificate',$this->data ,compact('flights'));
        }else{
          alert()->error('You Data has not been found.', 'Certificate Not Found');
          return redirect()->back();
@@ -35,7 +35,7 @@ class webpageController extends Controller
     {
         if (cit_admitcard::where('regno',$request->regno)->first()) {
             $flights = cit_admitcard::where('regno',$request->regno)->get();
-          return view('student/admitcard' ,compact('flights'));
+          return view('student/admitcard', $this->data ,compact('flights'));
         }else{
           alert()->error('You Data has not been found.', 'Admitcard Not Found');
           return redirect()->back();
@@ -57,7 +57,7 @@ class webpageController extends Controller
         // return $request->all();
         if (cit_result::where('roll',$request->roll)->first()) {
           $flights = cit_result::where('roll',$request->roll)->get();
-            return view('student/result' ,compact('flights'));
+            return view('student/result', $this->data ,compact('flights'));
         }else{
           alert()->error('You Data has not been found.', 'Result Not Found');
           return redirect()->back();

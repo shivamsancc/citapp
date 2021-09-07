@@ -11,7 +11,7 @@
         </div><br />
         <h2 style='text-align:center;'>Admitcard:</h2>
         <center><img
-                src='https://api.qrserver.com/v1/create-qr-code/?data=https://citet.org/vfm/apps/get-admit-card.php?RegNo=".$ar["regno"]."&result=Submit&size=100x100'
+                src='https://api.qrserver.com/v1/create-qr-code/?data={{route('getadmintcardsubmit')}}?regno={{$flights['0']->regno}}&result=Submit&size=100x100'
                 alt='' width='100px' height='100px'></center>
         <table align='center' width='650px' border='0' cellpadding='2' cellspacing='0' bgcolor='#ffffff'>
             <tbody>

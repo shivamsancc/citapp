@@ -109,6 +109,9 @@ Route::get('/clear', function() {
   return "Cleared!";
 
 });
+Route::match(['get', 'post'], 'register', function(){
+  return redirect('/');
+  });
 
 
 

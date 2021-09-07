@@ -36,6 +36,7 @@
                 <li class="pc-item"><a href="{{route('page.index')}}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">description</i></span><span class="pc-mtext">Page</span></a></li>
                 <li class="pc-item"><a href="{{route('slider.index')}}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">burst_mode</i></span><span class="pc-mtext">Slider</span></a></li>
                 <li class="pc-item"><a href="{{route('job.index')}}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">work_outline</i></span><span class="pc-mtext">Job</span></a></li>
+                <li class="pc-item"><a href="{{route('home')}}" class="pc-link "><span class="pc-micon"><i class="material-icons-two-tone">work_outline</i></span><span class="pc-mtext">Uploads</span></a></li>
             </ul>
         </li>
       </ul>

@@ -26,7 +26,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
-                    <img src="https://citet.org/vfm/apps/layout/images/logo.png" alt="citet-logo" class="img-fluid" style="max-width:200px;">
+                    <img src="@isset($settings['site_logo']){{$settings['site_logo']}}@endisset" alt="citet-logo" class="img-fluid" style="max-width:200px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
